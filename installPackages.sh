@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# MUST run as regular user (not sudo/root) to use `--user` flatpak flag
+# !!! MUST run as regular user (not sudo/root) to use `--user` flatpak flag !!!
 #
 #                       _____ _
 #                      /__   \ |__   ___
@@ -28,7 +28,6 @@
 # 2. Run as regular user (NOT sudo): ./installPackages.sh
 #
 # Edit DNF_PKGS/FLAT_PKGS to add/remove packages
-#
 set -e
 # ------------- CONFIGURATION -------------------------------------
 # List of dnf packages
@@ -61,19 +60,19 @@ FLAT_PKGS=(
 )
 
 # -------------------------------------------------------------------------
-# ensuring flathub is present
+# Ensure flathub is present
 if ! flatpak remotes | grep -q flathub; then
 	echo "Flathub not found, adding remote now..."
 	flatpak remote-add flathub https://flathub.org/repo/flathub.flatpak
 fi
 
-# installing dnf packages
+# Install dnf packages
 for pkg in "${DNF_PKGS[@]}"; do
 	echo "Installing dnf package: $pkg..."
 	sudo dnf --assumeyes install "$pkg"
 done
 
-# installing flatpaks
+# Install flatpaks
 for pkg in "${FLAT_PKGS[@]}"; do
 	echo "Installing flatpak: $pkg..."
 	flatpak install --user --assumeyes --or-update "$pkg"
