@@ -21,10 +21,9 @@
 #
 #                           presents,
 #
-#                       mountingMyOneDrive:
-#              a script to... well, mount my OneDrive
+#                     mountingMyOneDrive:
+#           a script to... well, mount my OneDrive
 #                          via rclone
-#
 # ------------------------------------------------------------------------------
 # How to use:
 # 1. Edit `ONEDRIVE` path below (dir MUST be empty)
