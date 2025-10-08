@@ -19,17 +19,17 @@
 #
 #                           presents,
 #
-#                        installPackages:
-#                    a single-shot installer
-#              for my personal Nobara/Fedora systems
-# -----------------------------------------------------------------
+#                      installMyPackages:
+#                   a single-shot installer
+#            for my personal Nobara/Fedora systems
+# --------------------------------------------------------------------------
 # How to use:
 # 1. Make executable: chmod +x installPackages.sh
 # 2. Run as regular user (NOT sudo): ./installPackages.sh
 #
 # Edit DNF_PKGS/FLAT_PKGS to add/remove packages
 set -e
-# ------------- CONFIGURATION -------------------------------------
+# ---------------------- CONFIGURATION -------------------------------------
 # List of dnf packages
 DNF_PKGS=(
 	rclone
