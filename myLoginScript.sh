@@ -21,12 +21,12 @@
 #
 #                           presents,
 #
-#                           myLogin:
-#              a script to run when I... well, login
+#                        myLoginScript:
+#             A script to run when I... well, login
 # -----------------------------------------------------------------
 # How to use:
-# 1. Ensure OpenRGB is configured with a `Home` profile 
-# 2. Ensure xcowsay is installed: `sudo dnf install xcowsay`
+# 1. Configure OpenRGB with a `Home` profile 
+# 2. Install xcowsay
 set -e
 # -----------------------------------------------------------------
 openrgb -p Home
