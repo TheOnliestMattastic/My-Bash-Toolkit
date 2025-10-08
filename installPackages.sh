@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-set -e
+# MUST run as regular user (not sudo/root) to use `--user` flatpak flag
+#
 #                       _____ _
 #                      /__   \ |__   ___
 #                        / /\/ '_ \ / _ \
@@ -16,9 +17,21 @@ set -e
 #           / /\/\ \ (_| | |_| || (_| \__ \ |_| | (__
 #           \/    \/\__,_|\__|\__\__,_|___/\__|_|\___|
 #
+#                           presents,
 #
-# ------------- CONFIGURATION ---------------------------------------------
-# List of dnf packages; change as needed
+#                        installPackages:
+#                    a single-shot installer
+#              for my personal Nobara/Fedora systems
+# -----------------------------------------------------------------
+# How to use:
+# 1. Make executable: chmod +x installPackages.sh
+# 2. Run as regular user (NOT sudo): ./installPackages.sh
+#
+# Edit DNF_PKGS/FLAT_PKGS to add/remove packages
+#
+set -e
+# ------------- CONFIGURATION -------------------------------------
+# List of dnf packages
 DNF_PKGS=(
 	rclone
 	syncthing
@@ -34,8 +47,7 @@ DNF_PKGS=(
 	tealdeer
 )
 
-# List of flatpaks
-# format: <package-name>
+# List of flatpaks; use <application-id>
 FLAT_PKGS=(
 	md.obsidian.Obsidian
 	com.super_productivity.SuperProductivity
