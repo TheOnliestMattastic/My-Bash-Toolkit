@@ -10,7 +10,7 @@ A curated collection of scripts for Nobara/Fedora users - designed to simplify c
 
 ---
 
-## 🔧 installFlatpakAndDnf
+## 📦 installFlatpakAndDnf
 
 Installs system packages and flatpaks for a clean Nobara/Fedora setup.
 
