@@ -45,6 +45,7 @@ DNF_PKGS=(
 	piper
 	tealdeer
 	clamav
+	clamav-freshclam
 )
 
 # List of flatpaks; use <application-id>
