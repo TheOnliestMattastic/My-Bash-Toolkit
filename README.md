@@ -4,7 +4,7 @@ A curated collection of scripts for Nobara/Fedora users - designed to simplify c
 
 ## Table of Contents
 
-- [installFlatpakAndDnf](#installflatpak-and-dnf)
+- [installFlatpakAndDnf](#installflatpakanddnf)
 - [mountingMyOneDrive](#mountingmyonedrive)
 - [scheduleIcheats](#scheduleicheats)
 
