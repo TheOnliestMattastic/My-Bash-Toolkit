@@ -63,8 +63,5 @@ Pre-configured cheat commands for Schedule I game via keyboard.
 
 ### License & Contributing
 
-- All scripts licensed under **MIT** ([LICENSE](LICENSE) file)
-- Forks and PRs welcome! Follow these steps:
-  1. Create a new branch
-  2. Update script comments with usage examples
-  3. Add test cases where applicable
+- All scripts licensed under **GNU** ([LICENSE](LICENSE) file)
+- Forks and PRs welcome!
