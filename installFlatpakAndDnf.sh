@@ -44,6 +44,7 @@ DNF_PKGS=(
 	cbonsai
 	piper
 	tealdeer
+	clamav
 )
 
 # List of flatpaks; use <application-id>
@@ -57,6 +58,7 @@ FLAT_PKGS=(
 	org.godotengine.Godot
 	org.libretro.RetroArch
 	com.jetbrains.Rider
+	eu.betterbird.Betterbird
 )
 
 # -------------------------------------------------------------------------
