@@ -1,4 +1,4 @@
-# 🛠️ myScripts
+# 📜 myScripts
 
 A curated collection of scripts for Nobara/Fedora users - designed to simplify clean installs and workflow automation.
 
@@ -26,7 +26,7 @@ chmod +x installFlatpakAndDnf.sh
 
 ---
 
-## 💾 mountingMyOneDrive
+## 🚚 mountingMyOneDrive
 
 Automatically mounts OneDrive via rclone with visual confirmation.
 
@@ -55,7 +55,7 @@ Pre-configured cheat commands for Schedule I game via keyboard.
 
 | Problem | Solution | Script |
 |---------|-----------|--------|
-| Reinstalling flatpaks after clean install | `installFlatpakAndDnf` | ✅ |
+| Reinstalling packages after clean install | `installFlatpakAndDnf` | ✅ |
 | OneDrive mounting failures | `mountingMyOneDrive` | ✅ |
 | Manual cheat codes | `scheduleIcheats` | ✅ |
 
