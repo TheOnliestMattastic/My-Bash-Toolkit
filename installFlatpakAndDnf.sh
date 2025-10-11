@@ -46,6 +46,7 @@ DNF_PKGS=(
 	tealdeer
 	clamav
 	clamav-freshclam
+	psutils
 )
 
 # List of flatpaks; use <application-id>
@@ -60,6 +61,7 @@ FLAT_PKGS=(
 	org.libretro.RetroArch
 	com.jetbrains.Rider
 	eu.betterbird.Betterbird
+	org.bleachbit.BleachBit
 )
 
 # -------------------------------------------------------------------------
