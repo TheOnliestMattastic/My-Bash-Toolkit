@@ -1,8 +1,8 @@
-# 🧰 My Bash Toolkit
+# 🧰 The One & Onliest Mattastic's Bash Toolkit
 
 A curated collection of scripts for Nobara/Fedora users - designed to simplify clean installs and workflow automation.
 
-## Table of Contents
+### Table of Contents
 
 - [installFlatpakAndDnf](#-installflatpakanddnf)
 - [mountingMyOneDrive](#-mountingmyonedrive)
@@ -10,7 +10,7 @@ A curated collection of scripts for Nobara/Fedora users - designed to simplify c
 
 ---
 
-## 📦 installFlatpakAndDnf
+### 📦 installFlatpakAndDnf
 
 Installs system packages and flatpaks for a clean Nobara/Fedora setup.
 
@@ -26,7 +26,7 @@ chmod +x installFlatpakAndDnf.sh
 
 ---
 
-## 🚚 mountingMyOneDrive
+### 🚚 mountingMyOneDrive
 
 Automatically mounts OneDrive via rclone with visual confirmation.
 
@@ -38,7 +38,7 @@ Automatically mounts OneDrive via rclone with visual confirmation.
 
 ---
 
-## 🎮 scheduleIcheats
+### 🎮 scheduleIcheats
 
 Pre-configured cheat commands for Schedule I game via keyboard.
 
@@ -51,7 +51,7 @@ Pre-configured cheat commands for Schedule I game via keyboard.
 
 ---
 
-## 💡 Why these scripts?
+### 💡 Why these scripts?
 
 | Problem | Solution | Script |
 |---------|-----------|--------|
