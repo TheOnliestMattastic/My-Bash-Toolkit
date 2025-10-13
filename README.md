@@ -26,7 +26,7 @@ chmod +x installFlatpakAndDnf.sh
 
 ---
 
-### 🚚 mountingMyOneDrive
+### 🚚 mountMyOneDrive
 
 Automatically mounts OneDrive via rclone with visual confirmation.
 
