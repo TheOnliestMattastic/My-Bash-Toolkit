@@ -1,67 +1,56 @@
-# 🧰 The One & Onliest Mattastic's Bash Toolkit
+# My-Bash-Toolkit
 
-A curated collection of scripts for Nobara/Fedora users - designed to simplify clean installs and workflow automation.
+A collection of Bash scripts created for automating various tasks on my personal system.
 
-### Table of Contents
+## Overview
 
-- [installFlatpakAndDnf](#-installflatpakanddnf)
-- [mountMyOneDrive](#-mountmyonedrive)
-- [scheduleIcheats](#-scheduleicheats)
+**My-Bash-Toolkit** is a public repository containing a growing set of practical Bash scripts designed to simplify and automate common tasks for personal system maintenance and productivity. All scripts are written in Shell and distributed under the Creative Commons Zero v1.0 Universal license (CC0-1.0).
 
----
+## Features
 
-### 📦 installFlatpakAndDnf
+- Automate various routine system tasks
+- Easily customizable scripts for personal workflows
+- Simple, readable Bash code suitable for learning or extending
 
-Installs system packages and flatpaks for a clean Nobara/Fedora setup.
+## Getting Started
 
-**How to use**:
-```bash
-chmod +x installFlatpakAndDnf.sh
-./installFlatpakAndDnf.sh  # Run as regular user (not sudo!)
-```
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
+   ```
+2. **Navigate to the toolkit directory:**
+   ```sh
+   cd My-Bash-Toolkit
+   ```
+3. **Browse available scripts:**
+   - View and modify scripts as needed for your system.
 
-**Configuration**: Edit `DNF_PKGS` and `FLAT_PKGS` arrays in the script.
+## Usage
 
-⚠️ **Critical**: Do *not* run with `sudo` - this script installs flatpaks for your user account (as recommend in the [Nobara Project Wiki](https://wiki.nobaraproject.org/en/new-user-guide-general-guidelines))
+- Run scripts directly from the command line:
+  ```sh
+  bash script-name.sh
+  ```
+- Make scripts executable and run:
+  ```sh
+  chmod +x script-name.sh
+  ./script-name.sh
+  ```
 
----
+> *Note: Replace `script-name.sh` with the actual script you wish to use.*
 
-### 🚚 mountMyOneDrive
+## License
 
-Automatically mounts OneDrive via rclone with visual confirmation.
+This project is licensed under the [CC0-1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) license.
 
-**How to use**:
-1. Configure rclone with OneDrive remote
-2. Set as login script in system settings for automatic execution
+## Contributing
 
-⚠️ **Must**: Existing directories must be empty before running
+Contributions are welcome! Feel free to open issues or submit pull requests for new scripts, improvements, or documentation updates.
 
----
+## Author
 
-### 🎮 scheduleIcheats
+- [TheOnliestMattastic](https://github.com/TheOnliestMattastic)
 
-Pre-configured cheat commands for Schedule I game via keyboard.
+## Repository
 
-**How to use**:
-1. Install `xdotool`
-2. Set as keyboard shortcut via system settings
-3. ⚠️ Do not touch keyboard during execution
-
-> *This script inputs game commands automatically - requires no user interaction.*
-
----
-
-### 💡 Why these scripts?
-
-| Problem | Solution | Script |
-|---------|-----------|--------|
-| Reinstalling packages after clean install | `installFlatpakAndDnf` | ✅ |
-| OneDrive mounting failures | `mountingMyOneDrive` | ✅ |
-| Manual cheat codes | `scheduleIcheats` | ✅ |
-
----
-
-### License & Contributing
-
-- All scripts licensed under **CCO** ([LICENSE](LICENSE) file)
-- Forks and PRs welcome!
+- [My-Bash-Toolkit on GitHub](https://github.com/TheOnliestMattastic/My-Bash-Toolkit)
