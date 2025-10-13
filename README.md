@@ -63,5 +63,5 @@ Pre-configured cheat commands for Schedule I game via keyboard.
 
 ### License & Contributing
 
-- All scripts licensed under **GNU** ([LICENSE](LICENSE) file)
+- All scripts licensed under **CCO** ([LICENSE](LICENSE) file)
 - Forks and PRs welcome!
