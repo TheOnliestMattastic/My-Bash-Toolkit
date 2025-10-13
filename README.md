@@ -1,4 +1,4 @@
-# 📜 myScripts
+# 🧰 My Bash Toolkit
 
 A curated collection of scripts for Nobara/Fedora users - designed to simplify clean installs and workflow automation.
 
