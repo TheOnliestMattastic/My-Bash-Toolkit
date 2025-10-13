@@ -21,8 +21,8 @@
 #
 #                           presents,
 #
-#                     mountingMyOneDrive:
-#           a script to... well, mount my OneDrive
+#                       mountMyOneDrive:
+#            a script to... well, mount my OneDrive
 #                          via rclone
 # ------------------------------------------------------------------------------
 # How to use:
