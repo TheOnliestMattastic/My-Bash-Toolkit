@@ -1,56 +1,78 @@
-# My-Bash-Toolkit
+# My Bash Toolkit
 
-A collection of Bash scripts created for automating various tasks on my personal system.
+```
+                       _____ _
+                      /__   \ |__   ___
+                        / /\/ '_ \ / _ \
+                       / /  | | | |  __/
+                       \/   |_| |_|\___|
+     ___               ___       ___       _ _           _
+    /___\_ __   ___   ( _ )     /___\_ __ | (_) ___  ___| |_
+   //  // '_ \ / _ \  / _ \/\  //  // '_ \| | |/ _ \/ __| __|
+  / \_//| | | |  __/ | (_>  < / \_//| | | | | |  __/\__ \ |_
+  \___/ |_| |_|\___|  \___/\/ \___/ |_| |_|_|_|\___||___/\__|
+                         _   _            _   _
+             /\/\   __ _| |_| |_ __ _ ___| |_(_) ___
+            /    \ / _` | __| __/ _` / __| __| |/ __|
+           / /\/\ \ (_| | |_| || (_| \__ \ |_| | (__
+           \/    \/\__,_|\__|\__\__,_|___/\__|_|\___|
+```
 
-## Overview
+![License](https://img.shields.io/badge/License-CC0--1.0-bd93f9?style=for-the-badge&logo=creative-commons&logoColor=282a36)
+![Shell](https://img.shields.io/badge/Shell-Bash-50fa7b?style=for-the-badge&logo=gnu-bash&logoColor=282a36)
+![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=ff79c6&style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=8be9fd&style=for-the-badge)
 
-**My-Bash-Toolkit** is a public repository containing a growing set of practical Bash scripts designed to simplify and automate common tasks for personal system maintenance and productivity. All scripts are written in Shell and distributed under the Creative Commons Zero v1.0 Universal license (CC0-1.0).
+A personal collection of Bash scripts I originally wrote to automate and streamline tasks on my own Linux systems. While these scripts weren’t designed with broad distribution in mind, I’ve made them public both to showcase my scripting and automation skills — and because others might find them useful or want to adapt them for their own workflows.
 
-## Features
+---
 
-- Automate various routine system tasks
-- Easily customizable scripts for personal workflows
-- Simple, readable Bash code suitable for learning or extending
+## 🌟 Overview
+This repository reflects how I approach real-world problems: identify repetitive tasks, script them into reliable solutions, and keep the code simple and adaptable. Each script is self-contained, documented, and easy to modify. Think of this as both a personal toolkit and a demonstration of my ability to write practical, maintainable Bash code.
 
-## Getting Started
+## 🛠️ Scripts Included
+- **installFlatpakAndDnf.sh**  
+  Automates installation of a curated set of `dnf` and Flatpak packages for Fedora/Nobara systems.
+- **mountMyOneDrive.sh**  
+  Mounts a OneDrive remote using `rclone`, with automated status checks and notifications.
+- **myLoginScript.sh**  
+  Applies an OpenRGB lighting profile and displays a fun fortune message at login.
+- **scheduleIcheats.sh**  
+  Demonstrates automation of repetitive keyboard input using `xdotool`.
 
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
-   ```
-2. **Navigate to the toolkit directory:**
-   ```sh
-   cd My-Bash-Toolkit
-   ```
-3. **Browse available scripts:**
-   - View and modify scripts as needed for your system.
+## 🚀 Getting Started
+Clone the repository:
+```sh
+git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
+cd My-Bash-Toolkit
+```
 
-## Usage
+Make a script executable and run:
+```sh
+chmod +x script-name.sh
+./script-name.sh
+```
 
-- Run scripts directly from the command line:
-  ```sh
-  bash script-name.sh
-  ```
-- Make scripts executable and run:
-  ```sh
-  chmod +x script-name.sh
-  ./script-name.sh
-  ```
+> Replace `script-name.sh` with the script you want to use.  
+> Some scripts require dependencies (e.g., `rclone`, `xdotool`, `OpenRGB`). See script headers for details.
 
-> *Note: Replace `script-name.sh` with the actual script you wish to use.*
+## 💡 Notes
+- These scripts were written for my personal setup, so you may need to tweak paths, dependencies, or configurations for your own environment.  
+- Contributions, improvements, or forks are welcome.
 
-## License
+## 📜 License
+This project is licensed under the [CC0-1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
 
-This project is licensed under the [CC0-1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) license.
+## 👤 Author
+**TheOnliestMattastic**  
+A self‑driven indie game dev with a background in creative problem‑solving and a passion for automation.
 
-## Contributing
+---
 
-Contributions are welcome! Feel free to open issues or submit pull requests for new scripts, improvements, or documentation updates.
+## 📌 Recruiter’s Note
+This repository is not a polished product but a window into how I solve problems with code. Each script began as a solution to a real need on my own system, and together they demonstrate:
+- Practical Bash scripting and Linux administration skills  
+- The ability to automate repetitive tasks into efficient workflows  
+- Clear documentation and maintainable code practices  
 
-## Author
-
-- [TheOnliestMattastic](https://github.com/TheOnliestMattastic)
-
-## Repository
-
-- [My-Bash-Toolkit on GitHub](https://github.com/TheOnliestMattastic/My-Bash-Toolkit)
+If you’re evaluating me as a candidate, this project reflects the same mindset I bring to IT support and system administration roles: resourceful, adaptable, and focused on making technology work smarter.
