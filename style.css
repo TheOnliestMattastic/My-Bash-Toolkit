@@ -1,9 +1,9 @@
 /* Dracula-inspired Light Theme */
 :root {
-  --bg-color: #f8f8ff;       /* soft off-white */
+  --bg-color: #b5b5ff;       /* soft off-white */
   --text-color: #2b2b2b;     /* dark gray */
-  --card-bg: #ffffff;
-  --header-bg: #eaeaf5;      /* pale lavender */
+  --card-bg: #a5bcff;
+  --header-bg: #99adeb;      /* pale lavender */
   --header-text: #2b2b2b;
   --accent: #6272a4;         /* muted Dracula blue */
   --accent-hover: #7082c4;
