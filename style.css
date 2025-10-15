@@ -1,22 +1,23 @@
 /* Dracula-inspired Light Theme */
 :root {
-  --bg-color: #b5b5ff;       /* soft off-white */
-  --text-color: #2b2b2b;     /* dark gray */
-  --card-bg: #a5bcff;
-  --header-bg: #99adeb;      /* pale lavender */
-  --header-text: #2b2b2b;
-  --accent: #6272a4;         /* muted Dracula blue */
-  --accent-hover: #7082c4;
+  --bg-color: #edeef7; 
+  --text-color: #1e1e1e; 
+  --card-bg: #f7f7fb; 
+  --header-bg: #dcdff2;
+  --header-text: #1e1e1e;
+  --accent: #6272a4;         /* Dracula blue */
+  --accent-hover: #7082c4; 
   --secondary: #bd93f9;      /* Dracula purple */
   --secondary-hover: #9a6df0;
-  --logo-color: #44475a;     /* dark slate for ASCII */
-  --footer-bg: #eaeaf5;
-  --footer-text: #2b2b2b;
+  --logo-color: #44475a;
+  --footer-bg: #dcdff2;
+  --footer-text: #1e1e1e;
 }
+
 
 /* Dark theme (Dracula classic) */
 [data-theme="dark"] {
-  --bg-color: #1e1e1e;
+  --bg-color: #1e1e1e; 
   --text-color: #f8f8f2;
   --card-bg: #282a36;
   --header-bg: #44475a;
@@ -155,7 +156,6 @@ h2 {
 footer {
   text-align: center;
   padding: 1rem;
-  /* background: #eee; */
   font-size: 0.9rem;
   margin-top: 2rem;
 }
