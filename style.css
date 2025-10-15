@@ -10,6 +10,8 @@
   --secondary: #bd93f9;      /* Dracula purple */
   --secondary-hover: #9a6df0;
   --logo-color: #44475a;     /* dark slate for ASCII */
+  --footer-bg: #eaeaf5;
+  --footer-text: #2b2b2b;
 }
 
 /* Dark theme (Dracula classic) */
@@ -24,6 +26,8 @@
   --secondary: #6272a4;
   --secondary-hover: #7082c4;
   --logo-color: #bd93f9;
+  --footer-bg: #44475a;
+  --footer-text: #f8f8f2;
 }
 
 /* Global styles */
@@ -151,7 +155,7 @@ h2 {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #eee;
+  /* background: #eee; */
   font-size: 0.9rem;
   margin-top: 2rem;
 }
