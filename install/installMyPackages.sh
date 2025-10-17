@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# !!! MUST run as regular user (not sudo/root) to use `--user` flatpak flag !!!
+# !!!!! MUST run as user (not sudo/root) to use `--user` flatpak flag  !!!!!
 # ___________.__             ________         .__  .__                 __   
 # \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_ 
 #   |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\
@@ -13,19 +13,19 @@
 # \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  >              
 #         \/     \/                \/     \/               \/               
 #
-#                           presents,
+#                                presents,
 #
-#                      installMyPackages:
-#                   a single-shot installer
-#            for my personal Nobara/Fedora systems
+#                           installMyPackages:
+#                         A single-shot installer
+#                     for my personal Nobara systems
 # --------------------------------------------------------------------------
-# How to use:
-# 1. Make executable: chmod +x installPackages.sh
-# 2. Run as regular user (NOT sudo): ./installPackages.sh
-#
-# Edit DNF_PKGS/FLAT_PKGS to add/remove packages
+# How to use this script:
+# 1. Ensure you run this script as a regular user (not sudo/root)
+#    Note: You will still be prompted for your password for dnf installs.
+# 2. (Optional) Edit the package lists below to suit your needs.
+# 3. Make the script executable: chmod +x installFlatpakAndDnf.sh
+# ---------------------------- CONFIGURATION -------------------------------
 set -e
-# ---------------------- CONFIGURATION -------------------------------------
 # List of dnf packages
 DNF_PKGS=(
 	rclone
@@ -45,7 +45,7 @@ DNF_PKGS=(
 	psutils
 )
 
-# List of flatpaks; use <application-id>
+# List of flatpak packages (use app ID for stability, e.g., org.videolan.VLC)
 FLAT_PKGS=(
 	md.obsidian.Obsidian
 	com.super_productivity.SuperProductivity
@@ -59,8 +59,7 @@ FLAT_PKGS=(
 	eu.betterbird.Betterbird
 	org.bleachbit.BleachBit
 )
-
-# -------------------------------------------------------------------------
+# ------------------------ END OF CONFIGURATION ----------------------------
 # Ensure flathub is present
 if ! flatpak remotes | grep -q flathub; then
 	echo "Flathub not found, adding remote now..."
@@ -70,11 +69,11 @@ fi
 # Install dnf packages
 for pkg in "${DNF_PKGS[@]}"; do
 	echo "Installing dnf package: $pkg..."
-	sudo dnf --assumeyes install "$pkg"
+	sudo dnf --assumeyes --quiet install "$pkg"
 done
 
 # Install flatpaks
 for pkg in "${FLAT_PKGS[@]}"; do
 	echo "Installing flatpak: $pkg..."
-	flatpak install --user --assumeyes --or-update "$pkg"
+	flatpak install --user --assumeyes --or-update --noninteractive "$pkg"
 done

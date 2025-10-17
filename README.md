@@ -15,10 +15,14 @@ ___________.__             ________         .__  .__                 __
 
 # My Bash Toolkit
 
-![License](https://img.shields.io/badge/License-CC0--1.0-bd93f9?style=for-the-badge&logo=creative-commons&logoColor=282a36)
-![Shell](https://img.shields.io/badge/Shell-Bash-50fa7b?style=for-the-badge&logo=gnu-bash&logoColor=282a36)
-![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=ff79c6&style=for-the-badge)
-![Repo Size](https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=8be9fd&style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&logoSize=auto&logoColor=white&labelColor=6272a4)
+![Repo Size](https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&logoSize=auto&logoColor=white&labelColor=6272a4)
+![code size](https://img.shields.io/github/languages/code-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&logoSize=auto&logoColor=white&labelColor=6272a4)
+[![Shell](https://img.shields.io/badge/Shell-Bash-bd93f9?style=for-the-badge&logo=gnu-bash&logoSize=auto&logoColor=white&labelColor=6272a4)](https://www.gnu.org/software/bash/)
+![License](https://img.shields.io/badge/License-CC0--1.0-bd93f9?style=for-the-badge&logo=creative-commons&logoSize=auto&logoColor=white&labelColor=6272a4)  
+
+[![GitHub Pages](https://img.shields.io/badge/live-bd93f9?style=for-the-badge&logo=githubpages&logoSize=auto&logoColor=white&label&labelColor=6272a4)](https://theonliestmattastic.github.io/My-Bash-Toolkit/)
+
 
 A personal collection of Bash scripts I originally wrote to automate and streamline tasks on my own Linux systems. While these scripts weren’t designed with broad distribution in mind, I’ve made them public both to showcase my scripting and automation skills — and because others might find them useful or want to adapt them for their own workflows.
 
@@ -60,12 +64,6 @@ chmod +x script-name.sh
 ## 📜 License
 This project is licensed under the [CC0-1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
 
-## 👤 Author
-**TheOnliestMattastic**  
-A self‑driven indie game dev with a background in creative problem‑solving and a passion for automation.
-
----
-
 ## 📌 Recruiter’s Note
 This repository is not a polished product but a window into how I solve problems with code. Each script began as a solution to a real need on my own system, and together they demonstrate:
 - Practical Bash scripting and Linux administration skills  
@@ -73,3 +71,10 @@ This repository is not a polished product but a window into how I solve problems
 - Clear documentation and maintainable code practices  
 
 If you’re evaluating me as a candidate, this project reflects the same mindset I bring to IT support and system administration roles: resourceful, adaptable, and focused on making technology work smarter.
+
+## 📫 Contact
+[![Portfolio](https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoSize=auto&labelColor=6272a4)](https://theonliestmattastic.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=6272a4)](https://github.com/theonliestmattastic)
+[![Email](https://img.shields.io/badge/matthew.poole485@gmail.com-bd93f9?style=for-the-badge&logo=gmail&logoColor=white&logoSize=auto&labelColor=6272a4)](mailto:matthew.poole485@gmail.com)  
+
+> _“Sometimes the questions are complicated and the answers are simple.”_ — Dr. Seuss
