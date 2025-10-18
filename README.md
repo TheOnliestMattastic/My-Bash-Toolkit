@@ -13,33 +13,47 @@ ___________.__             ________         .__  .__                 __
         \/     \/                \/     \/               \/               
 ```
 
-# My Bash Toolkit
+# 🧰 My Bash Toolkit
 
-![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&logoSize=auto&logoColor=white&labelColor=6272a4)
-![Repo Size](https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&logoSize=auto&logoColor=white&labelColor=6272a4)
-![code size](https://img.shields.io/github/languages/code-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&logoSize=auto&logoColor=white&labelColor=6272a4)
-[![Shell](https://img.shields.io/badge/Shell-Bash-bd93f9?style=for-the-badge&logo=gnu-bash&logoSize=auto&logoColor=white&labelColor=6272a4)](https://www.gnu.org/software/bash/)
-![License](https://img.shields.io/badge/License-CC0--1.0-bd93f9?style=for-the-badge&logo=creative-commons&logoSize=auto&logoColor=white&labelColor=6272a4)  
+![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
+![Repo Size](https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
+![Code Size](https://img.shields.io/github/languages/code-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
+[![Shell](https://img.shields.io/badge/Shell-Bash-bd93f9?style=for-the-badge&logo=gnu-bash&logoColor=white&labelColor=6272a4)](https://www.gnu.org/software/bash/)
+![License](https://img.shields.io/badge/License-CC0--1.0-bd93f9?style=for-the-badge&logo=creativecommons&logoColor=white&labelColor=6272a4)  
 
-[![GitHub Pages](https://img.shields.io/badge/live-bd93f9?style=for-the-badge&logo=githubpages&logoSize=auto&logoColor=white&label&labelColor=6272a4)](https://theonliestmattastic.github.io/My-Bash-Toolkit/)
+[![GitHub Pages](https://img.shields.io/badge/Live_Demo-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4)](https://theonliestmattastic.github.io/My-Bash-Toolkit/)
 
 
-A personal collection of Bash scripts I originally wrote to automate and streamline tasks on my own Linux systems. While these scripts weren’t designed with broad distribution in mind, I’ve made them public both to showcase my scripting and automation skills — and because others might find them useful or want to adapt them for their own workflows.
+## 🔭 Overview
+This repository is a collection of Bash scripts I use to automate and streamline my Linux workflow. Each script is self‑contained, documented, and easy to adapt. Think of it as both a personal toolkit and a demonstration of my ability to write practical, maintainable automation.
 
----
 
-## 🌟 Overview
-This repository reflects how I approach real-world problems: identify repetitive tasks, script them into reliable solutions, and keep the code simple and adaptable. Each script is self-contained, documented, and easy to modify. Think of this as both a personal toolkit and a demonstration of my ability to write practical, maintainable Bash code.
+## 🗺️ Scripts Included
 
-## 🛠️ Scripts Included
-- **installFlatpakAndDnf.sh**  
-  Automates installation of a curated set of `dnf` and Flatpak packages for Fedora/Nobara systems.
-- **mountMyOneDrive.sh**  
-  Mounts a OneDrive remote using `rclone`, with automated status checks and notifications.
-- **myLoginScript.sh**  
-  Applies an OpenRGB lighting profile and displays a fun fortune message at login.
-- **scheduleIcheats.sh**  
-  Demonstrates automation of repetitive keyboard input using `xdotool`.
+### **installMyPackages.sh**
+- **Purpose:** Bootstraps a fresh Nobara/Fedora system.  
+- **Summary:** Installs a curated set of `dnf` packages (e.g., rclone, syncthing, htop, clamav) and Flatpak apps (e.g., Obsidian, Krita, Godot, RetroArch). Ensures Flathub is added if missing.  
+- **Dependencies:** `dnf`, `flatpak`.  
+- **Use Case:** Quickly sets up a new machine with my preferred tools and apps.  
+
+### **mountMyCloudDrives.sh**
+- **Purpose:** Mounts multiple cloud storage accounts locally.  
+- **Summary:** Creates directories for OneDrive, Google Drive, and Dropbox, mounts them via `rclone`, verifies with `findmnt`, and reports success/failure with `xcowsay`.  
+- **Dependencies:** `rclone`, `xcowsay`.  
+- **Use Case:** Automates cloud drive access at login with playful feedback.  
+
+### **myLoginScript.sh**
+- **Purpose:** Adds polish and fun to login.  
+- **Summary:** Loads my OpenRGB profile (`Home`) and displays a fortune message with `xcowsay`.  
+- **Dependencies:** `openrgb`, `xcowsay`.  
+- **Use Case:** Ensures consistent RGB setup and a lighthearted greeting every session.  
+
+### **scheduleIautoCommands.sh**
+- **Purpose:** Automates in‑game keybinding setup for *Schedule I*.  
+- **Summary:** Uses `xdotool` to bind teleport, inventory, and utility commands to function keys. Runs after a short delay so you can switch to the game window.  
+- **Dependencies:** `xdotool`.  
+- **Use Case:** Saves time by auto‑configuring repetitive in‑game commands.  
+
 
 ## 🚀 Getting Started
 Clone the repository:
@@ -55,26 +69,32 @@ chmod +x script-name.sh
 ```
 
 > Replace `script-name.sh` with the script you want to use.  
-> Some scripts require dependencies (e.g., `rclone`, `xdotool`, `OpenRGB`). See script headers for details.
+> See script headers for specific dependencies.
 
-## 💡 Notes
-- These scripts were written for my personal setup, so you may need to tweak paths, dependencies, or configurations for your own environment.  
-- Contributions, improvements, or forks are welcome.
 
-## 📜 License
-This project is licensed under the [CC0-1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
+## ⭐ Notes
 
-## 📌 Recruiter’s Note
-This repository is not a polished product but a window into how I solve problems with code. Each script began as a solution to a real need on my own system, and together they demonstrate:
+- These scripts were written for my personal setup, so you may need to tweak paths or configs.  
+- Contributions, forks, and adaptations are welcome.  
+
+
+## 🛸 License
+
+This project is licensed under the [CC0‑1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
+
+
+## 🌠 Recruiter’s Note
+
+This repository isn’t a polished product — it’s a window into how I solve problems with code. Each script began as a solution to a real need, and together they show:
 - Practical Bash scripting and Linux administration skills  
 - The ability to automate repetitive tasks into efficient workflows  
 - Clear documentation and maintainable code practices  
 
-If you’re evaluating me as a candidate, this project reflects the same mindset I bring to IT support and system administration roles: resourceful, adaptable, and focused on making technology work smarter.
+## 👽 Contact
 
-## 📫 Contact
-[![Portfolio](https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoSize=auto&labelColor=6272a4)](https://theonliestmattastic.github.io/)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&logoSize=auto&labelColor=6272a4)](https://github.com/theonliestmattastic)
-[![Email](https://img.shields.io/badge/matthew.poole485@gmail.com-bd93f9?style=for-the-badge&logo=gmail&logoColor=white&logoSize=auto&labelColor=6272a4)](mailto:matthew.poole485@gmail.com)  
+[![Portfolio](https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4)](https://theonliestmattastic.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4)](https://github.com/theonliestmattastic)
+[![Email](https://img.shields.io/badge/Email-matthew.poole485%40gmail.com-bd93f9?style=for-the-badge&logo=gmail&logoColor=white&labelColor=6272a4)](mailto:matthew.poole485@gmail.com)
+[![Resume](https://img.shields.io/badge/Resume-PDF-bd93f9?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=6272a4)](https://raw.githubusercontent.com/theonliestmattastic/theonliestmattastic.github.io/main/assets/docs/resume.pdf)  
 
 > _“Sometimes the questions are complicated and the answers are simple.”_ — Dr. Seuss
