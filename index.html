@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>My Bash Toolkit</title>
   </head>
 
 <body>
   <header>
-    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <button id="theme-toggle" aria-label="Toggle theme">🌛</button>
     <pre class="ascii-logo"><code>
 ___________.__             ________         .__  .__                 __   
 \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_ 
@@ -40,7 +40,7 @@ ___________.__             ________         .__  .__                 __
 
     <!-- installMyPackages -->
     <div class="project-card">
-      <h2>📦 installMyPackages.sh</h2>
+      <h2>🛰️ installMyPackages.sh</h2>
       <p>
         <img src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4">
         <img src="https://img.shields.io/badge/Package-dnf-bd93f9?logo=fedora&logoColor=white&style=for-the-badge&labelColor=6272a4">
@@ -184,7 +184,7 @@ cd My-Bash-Toolkit</code></pre>
 
     if (currentTheme) {
       document.documentElement.setAttribute('data-theme', currentTheme);
-      toggleBtn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+      toggleBtn.textContent = currentTheme === 'dark' ? '🌞' : '🌛';
     }
 
     toggleBtn.addEventListener('click', () => {
@@ -192,11 +192,11 @@ cd My-Bash-Toolkit</code></pre>
       if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        toggleBtn.textContent = '🌙';
+        toggleBtn.textContent = '🌛';
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        toggleBtn.textContent = '☀️';
+        toggleBtn.textContent = '🌞';
       }
     });
   </script>

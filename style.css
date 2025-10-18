@@ -1,19 +1,18 @@
 /* Dracula-inspired Light Theme */
 :root {
-  --bg-color: #edeef7; 
-  --text-color: #1e1e1e; 
-  --card-bg: #f7f7fb; 
+  --bg-color: #edeef7;
+  --text-color: #1e1e1e;
+  --card-bg: #f7f7fb;
   --header-bg: #dcdff2;
   --header-text: #1e1e1e;
-  --accent: #6272a4;         /* Dracula blue */
-  --accent-hover: #7082c4; 
-  --secondary: #bd93f9;      /* Dracula purple */
+  --accent: #6272a4;
+  --accent-hover: #7082c4;
+  --secondary: #bd93f9;
   --secondary-hover: #9a6df0;
   --logo-color: #44475a;
   --footer-bg: #dcdff2;
   --footer-text: #1e1e1e;
 }
-
 
 /* Dark theme (Dracula classic) */
 [data-theme="dark"] {
@@ -66,6 +65,10 @@ h1, h2 {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+.project-card.sub {
+  background: var(--header-bg);
+}
+
 h2 {
   border-bottom: 2px solid #eee;
   padding-bottom: 0.3rem;
@@ -86,38 +89,26 @@ h2 {
   border-radius: 2px;
 }
 
+img, .ascii-logo, .project-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header { position: relative; }
+.header .ascii-logo { position: relative; top: 0; left: 0; }
+
 /* Buttons */
 .buttons {
   margin-top: 1rem;
   display: flex;
-  gap: 1rem;
+  gap: .25rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.btn {
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-.btn.demo {
-  background: var(--accent);
-  color: #fff;
-}
-
-.btn.demo:hover {
-  background: var(--accent-hover);
-}
-
-.btn.code {
-  background: var(--secondary);
-  color: #f8f8f2;
-}
-
-.btn.code:hover {
-  background: var(--secondary-hover);
+.buttons.card {
+  justify-content: left;
 }
 
 /* ASCII Art Logo Styling */
@@ -130,6 +121,7 @@ h2 {
   text-align: left;
   margin: 1rem 0;
   display: inline-block;
+  overflow-x: auto;
 }
 
 /* Theme toggle button (fixed top-right) */
