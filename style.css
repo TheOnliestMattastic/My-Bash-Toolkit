@@ -111,6 +111,11 @@ img, .ascii-logo, .project-card img {
   justify-content: left;
 }
 
+pre {
+  display: inline-block;
+  overflow-x: auto;
+}
+
 /* ASCII Art Logo Styling */
 .ascii-logo {
   font-family: "Courier New", monospace;
