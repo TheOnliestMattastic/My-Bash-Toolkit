@@ -127,7 +127,7 @@ code {
   line-height: 1.1;
   white-space: pre;
   color: var(--logo-color);
-  text-align: left;
+  text-align: center;
   margin: 1rem 0;
 }
 
