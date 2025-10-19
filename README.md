@@ -13,7 +13,7 @@ ___________.__             ________         .__  .__                 __
         \/     \/                \/     \/               \/               
 ```
 
-# 🧰 My Bash Toolkit
+# 🛰️ My Bash Toolkit
 
 ![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
 ![Repo Size](https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
@@ -30,25 +30,25 @@ This repository is a collection of Bash scripts I use to automate and streamline
 
 ## 🗺️ Scripts Included
 
-### **installMyPackages.sh**
+### 📡 **installMyPackages.sh**
 - **Purpose:** Bootstraps a fresh Nobara/Fedora system.  
 - **Summary:** Installs a curated set of `dnf` packages (e.g., rclone, syncthing, htop, clamav) and Flatpak apps (e.g., Obsidian, Krita, Godot, RetroArch). Ensures Flathub is added if missing.  
 - **Dependencies:** `dnf`, `flatpak`.  
 - **Use Case:** Quickly sets up a new machine with my preferred tools and apps.  
 
-### **mountMyCloudDrives.sh**
+### ☁️ **mountMyCloudDrives.sh**
 - **Purpose:** Mounts multiple cloud storage accounts locally.  
 - **Summary:** Creates directories for OneDrive, Google Drive, and Dropbox, mounts them via `rclone`, verifies with `findmnt`, and reports success/failure with `xcowsay`.  
 - **Dependencies:** `rclone`, `xcowsay`.  
 - **Use Case:** Automates cloud drive access at login with playful feedback.  
 
-### **myLoginScript.sh**
+### 🌈 **myLoginScript.sh**
 - **Purpose:** Adds polish and fun to login.  
 - **Summary:** Loads my OpenRGB profile (`Home`) and displays a fortune message with `xcowsay`.  
 - **Dependencies:** `openrgb`, `xcowsay`.  
 - **Use Case:** Ensures consistent RGB setup and a lighthearted greeting every session.  
 
-### **scheduleIautoCommands.sh**
+### 🤖 **scheduleIautoCommands.sh**
 - **Purpose:** Automates in‑game keybinding setup for *Schedule I*.  
 - **Summary:** Uses `xdotool` to bind teleport, inventory, and utility commands to function keys. Runs after a short delay so you can switch to the game window.  
 - **Dependencies:** `xdotool`.  
