@@ -23,10 +23,8 @@ ___________.__             ________         .__  .__                 __
 
 [![GitHub Pages](https://img.shields.io/badge/Live_Demo-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4)](https://theonliestmattastic.github.io/My-Bash-Toolkit/)
 
-
 ## 🔭 Overview
 This repository is a collection of Bash scripts I use to automate and streamline my Linux workflow. Each script is self‑contained, documented, and easy to adapt. Think of it as both a personal toolkit and a demonstration of my ability to write practical, maintainable automation.
-
 
 ## 🗺️ Scripts Included
 
@@ -54,7 +52,6 @@ This repository is a collection of Bash scripts I use to automate and streamline
 - **Dependencies:** `xdotool`.  
 - **Use Case:** Saves time by auto‑configuring repetitive in‑game commands.  
 
-
 ## 🚀 Getting Started
 Clone the repository:
 ```sh
@@ -71,17 +68,14 @@ chmod +x script-name.sh
 > Replace `script-name.sh` with the script you want to use.  
 > See script headers for specific dependencies.
 
-
 ## ⭐ Notes
 
 - These scripts were written for my personal setup, so you may need to tweak paths or configs.  
 - Contributions, forks, and adaptations are welcome.  
 
-
 ## 🛸 License
 
 This project is licensed under the [CC0‑1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
-
 
 ## 🌠 Recruiter’s Note
 
@@ -90,7 +84,9 @@ This repository isn’t a polished product — it’s a window into how I solve 
 - The ability to automate repetitive tasks into efficient workflows  
 - Clear documentation and maintainable code practices  
 
-## 👽 Contact
+## 👽 Contact!
+
+Curious about my projects? Want to collaborate or hire for entry-level IT/support/dev roles? Shoot me an email or connect on GitHub—I reply quickly and love new challenges.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4)](https://theonliestmattastic.github.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4)](https://github.com/theonliestmattastic)
