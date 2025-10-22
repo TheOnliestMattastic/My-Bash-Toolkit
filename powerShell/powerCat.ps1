@@ -66,8 +66,8 @@ param (
     [Alias("e")]
     [string[]]$Extensions = @(".lua"), # default
 
-    [Alias("h")]
-    [switch]$Help
+    [Alias("f")]
+    [switch]$Fence
 )
 
 # Extend $Extensions based on switches
@@ -75,6 +75,7 @@ if ($Bash)          { $Extensions += ".sh" }
 if ($HTML)          { $Extensions += ".html" }
 if ($CSS)           { $Extensions += ".css" }
 if ($Powershell)    { $Extensions += ".css" }
+if ($Markdown)      { $Extensions += ".md" }
 
 # man-page
 if ($Help) {
@@ -137,15 +138,15 @@ foreach ($file in $Files) {
     Add-Content -Path $OutputFile -Value ("--- File: {0} ---" -f $file.Name)
     Add-Content -Path $OutputFile -Value ("`n")
 
-    # Open fence for -m flag
-    if ($Markdown) {
+    # Open fence for -f flag
+    if ($Fence) {
         Add-Content -Path $OutputFile -Value ('```{0}' -f $file.Extension.TrimStart('.'))
     }
 
     Get-Content -Path $file.FullName | Add-Content -Path $OutputFile
 
-    # Close fence for -m flag
-    if ($Markdown) {
+    # Close fence for -f flag
+    if ($Fence) {
         Add-Content -Path $OutputFile -Value ('```') 
     }
 
