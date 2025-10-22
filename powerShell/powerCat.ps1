@@ -37,6 +37,9 @@ param (
     [Alias("file")]
     [string]$OutputFile,
 
+    [Alias("h")]
+    [switch]$Help,
+
     [Alias("r")]
     [Alias("rec")]
     [Alias("recursive")]
@@ -83,24 +86,25 @@ if ($Help) {
 powerCat.ps1 — A single-shot concatenator for bundling code and docs
 
 USAGE:
-    .\powerCat.ps1 -s <SourceDir> -o <OutputFile> [options]
+    .\powerCat.ps1 -s   <SourceDir> -o <OutputFile> [options]
 
 REQUIRED PARAMETERS:
-    -s, -SourceDir   Path to the directory containing files
-    -o, -OutputFile  Path to the output text file
+    -s, -SourceDir      Path to the directory containing files
+    -o, -OutputFile     Path to the output text file
 
 OPTIONS:
-    -r, -Recurse     Include subdirectories
-    -m, -Markdown    Wrap file contents in Markdown code fences
-    -e, -Extensions  Specify extensions (default: .lua, .md)
-                     Example: -e ".ps1",".json",".sh"
+    -r, -Recurse        Include subdirectories
+    -f, -Fence          Wrap file contents in Markdown code fences (i.e., '```')
+    -e, -Extensions     Specify extensions (default: .lua, .md)
+                        Example: -e ".ps1",".json",".sh"
 
-    -b, -Bash        Include .sh files
-    -ht, -HTML       Include .html files
-    -c, -CSS         Include .css files
-    -p, -PowerShell  Include .ps1 files
+    -b, -Bash           Include .sh files
+    -c, -CSS            Include .css files
+    -ht, -HTML          Include .html files
+    -m, -Markdown       Include .md files
+    -p, -PowerShell     Include .ps1 files
 
-    -h, -Help        Show this help message
+    -h, -Help           Show this help message
 
 EXAMPLES:
     .\powerCat.ps1 -s "C:\Project" -o "C:\bundle.txt"
@@ -125,7 +129,7 @@ $Files = foreach ($ext in $Extensions) {
 }
 
 if ($Files.Count -eq 0) {
-    Write-Host "No files matching $ext found in $SourceDir"
+    Write-Host "No matching files found in $SourceDir"
     exit
 }
 
