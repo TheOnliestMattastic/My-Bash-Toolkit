@@ -51,11 +51,12 @@ param (
     [switch]$Bash,
 
     [Alias("ht")]
+    [Alias("htm")]
     [switch]$HTML,
 
     [Alias("c")]
     [Alias("cs")]
-    [switch]$Css,
+    [switch]$CSS,
 
     [Alias("p")]
     [Alias("ps")]
@@ -63,11 +64,17 @@ param (
     [switch]$Powershell,
 
     [Alias("e")]
-    [string[]]$Extensions = @(".lua", ".md"), # default
+    [string[]]$Extensions = @(".lua"), # default
 
     [Alias("h")]
     [switch]$Help
 )
+
+# Extend $Extensions based on switches
+if ($Bash)          { $Extensions += ".sh" }
+if ($HTML)          { $Extensions += ".html" }
+if ($CSS)           { $Extensions += ".css" }
+if ($Powershell)    { $Extensions += ".css" }
 
 # man-page
 if ($Help) {
@@ -127,12 +134,21 @@ Remove-Item -Path $OutputFile -ErrorAction SilentlyContinue
 # Concatenate contents into the output file
 # Add a header before each file for clarity
 foreach ($file in $Files) {
-    Add-Content -Path $OutputFile -Value ("---v--- File: {0} ---v---" -f $file.Name)
+    Add-Content -Path $OutputFile -Value ("--- File: {0} ---" -f $file.Name)
     Add-Content -Path $OutputFile -Value ("`n")
-    Add-Content -Path $OutputFile -Value ('```{0}' -f $file.Extension.TrimStart('.'))
-    Add-Content -Path $OutputFile -Value ("`n")
+
+    # Open fence for -m flag
+    if ($Markdown) {
+        Add-Content -Path $OutputFile -Value ('```{0}' -f $file.Extension.TrimStart('.'))
+    }
+
     Get-Content -Path $file.FullName | Add-Content -Path $OutputFile
-    Add-Content -Path $OutputFile -Value ('```')
+
+    # Close fence for -m flag
+    if ($Markdown) {
+        Add-Content -Path $OutputFile -Value ('```') 
+    }
+
     Add-Content -Path $OutputFile -Value ("`n")
 }
 
