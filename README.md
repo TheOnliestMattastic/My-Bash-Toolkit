@@ -15,8 +15,6 @@ ___________.__             ________         .__  .__                 __
         \/     \/                \/     \/               \/               
 ```
 
-# 🧰 My Bash Toolkit
-
 ![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
 ![Repo Size](https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
 ![Code Size](https://img.shields.io/github/languages/code-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
@@ -105,11 +103,12 @@ This project is licensed under the [CC0‑1.0 Universal License](https://creativ
 ## 🪐 Recruiter’s Note
 
 This repository isn’t a polished product — it’s a window into how I solve problems with code. Each script began as a solution to a real need, and together they show:
+
 - Practical Bash scripting and Linux administration skills  
 - The ability to automate repetitive tasks into efficient workflows  
 - Clear documentation and maintainable code practices  
 
-## 👽 Contact!
+## 👽 Contact
 
 Curious about my projects? Want to collaborate or hire for entry-level IT/support/dev roles? Shoot me an email or connect on GitHub—I reply quickly and love new challenges.
 
@@ -117,4 +116,4 @@ Curious about my projects? Want to collaborate or hire for entry-level IT/suppor
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4)](https://github.com/theonliestmattastic)
 [![Email](https://img.shields.io/badge/Email-matthew.poole485%40gmail.com-bd93f9?style=for-the-badge&logo=gmail&logoColor=white&labelColor=6272a4)](mailto:matthew.poole485@gmail.com)
 
-> _“Sometimes the questions are complicated and the answers are simple.”_ — Dr. Seuss
+> *“Sometimes the questions are complicated and the answers are simple.”* — Dr. Seuss
