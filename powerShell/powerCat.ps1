@@ -25,17 +25,61 @@
 # --------------------------------------------------------------------------
 param (
     [Parameter(Mandatory = $true)]
+    [Alias("s")]
+    [Alias("source")]
+    [Alias("dir")]
     [string]$SourceDir,
 
     [Parameter(Mandatory = $true)]
-    [string]$OutputFile
+    [Alias("o")]
+    [Alias("out")]
+    [Alias("output")]
+    [Alias("file")]
+    [string]$OutputFile,
+
+    [Alias("r")]
+    [Alias("rec")]
+    [Alias("recursive")]
+    [switch]$Recurse,
+
+    [Alias("m")]
+    [Alias("md")]
+    [switch]$Markdown,
+
+    [Alias("b")]
+    [Alias("sh")]
+    [switch]$Bash,
+
+    [Alias("ht")]
+    [switch]$HTML,
+
+    [Alias("c")]
+    [Alias("cs")]
+    [switch]$Css,
+
+    [Alias("p")]
+    [Alias("ps")]
+    [Alias("ps1")]
+    [switch]$Powershell,
+
+    [Alias("e")]
+    [string[]]$Extensions = @(".lua", ".md"), # default
+
+    [Alias("h")]
+    [switch]$Help
 )
 
 # Get all files in the directory 
-$Files = Get-ChildItem -Path $SourceDir -Include *.lua, *.md, *.sh -File -Recurse
+$Files = foreach ($ext in $Extensions) {
+    if ($Recurse) {
+        Get-ChildItem -Path $SourceDir -Filter "*$ext" -File -Recurse
+    } else {
+        Get-ChildItem -Path $SourceDir -Filter "*$ext" -File
+    }
+}
 
 if ($Files.Count -eq 0) {
-    Write-Host "No .lua, .md, or .sh files found in $SourceDir"
+    Write-Host "No files matching $ext found in $SourceDir"
     exit
 }
 
