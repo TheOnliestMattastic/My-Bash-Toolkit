@@ -1,0 +1,289 @@
+Installing flatpak: md.obsidian.Obsidian...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with md.obsidian.Obsidian (possibly already installed), continuing...
+Installing flatpak: com.super_productivity.SuperProductivity...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with com.super_productivity.SuperProductivity (possibly already installed), continuing...
+Installing flatpak: io.github.nokse22.asciidraw...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with io.github.nokse22.asciidraw (possibly already installed), continuing...
+Installing flatpak: org.videolan.VLC...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with org.videolan.VLC (possibly already installed), continuing...
+Installing flatpak: org.kde.krita...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with org.kde.krita (possibly already installed), continuing...
+Installing flatpak: org.godotengine.Godot...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with org.godotengine.Godot (possibly already installed), continuing...
+Installing flatpak: org.libretro.RetroArch...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with org.libretro.RetroArch (possibly already installed), continuing...
+Installing flatpak: eu.betterbird.Betterbird...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with eu.betterbird.Betterbird (possibly already installed), continuing...
+Installing flatpak: org.bleachbit.BleachBit...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with org.bleachbit.BleachBit (possibly already installed), continuing...
+Installing flatpak: com.jetpackduba.Gitnuro...
+Looking for matches…
+error: Unable to load summary from remote flathub: GPG verification enabled, but no summary found (check that the configured URL in remote config is correct)
+Warning: Issue with com.jetpackduba.Gitnuro (possibly already installed), continuing...
+Flatpaks installed!
+Installing dnf package: rclone...
+Package "rclone-1.71.0-1.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: syncthing...
+Package "syncthing-1.30.0-1.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: shfmt...
+Package "shfmt-3.7.0-5.fc41.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: shellcheck...
+Package "ShellCheck-0.10.0-4.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: nodejs-bash-language-server...
+Package "nodejs-bash-language-server-5.6.0-2.fc42.noarch" is already installed.
+
+Nothing to do.
+Installing dnf package: nvtop...
+Package "nvtop-3.2.0-3.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: htop...
+Package "htop-3.4.1-1.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: cbonsai...
+Package "cbonsai-1.3.1-8.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: piper...
+Package "piper-0.8-9.fc42.noarch" is already installed.
+
+Nothing to do.
+Installing dnf package: tealdeer...
+Package "tealdeer-1.7.2-1.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: clamav...
+Package "clamav-1.4.3-1.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: clamav-freshclam...
+Package "clamav-freshclam-1.4.3-1.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: psutils...
+Package "psutils-2.10-8.fc42.noarch" is already installed.
+
+Nothing to do.
+Installing dnf package: toilet...
+Package "toilet-0.3-18.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: figlet...
+Package "figlet-2.2.5-31.20151018gita565ae1.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: lolcat...
+Package "lolcat-1.5-3.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: cowsay...
+Package "cowsay-3.8.4-2.fc42.noarch" is already installed.
+
+Nothing to do.
+Installing dnf package: xcowsay...
+Package "xcowsay-1.6-8.fc42.x86_64" is already installed.
+
+Nothing to do.
+Installing dnf package: love...
+Package "love-11.5-5.fc42.x86_64" is already installed.
+
+Nothing to do.
+ _________________________
+< dnf packages installed! >
+ -------------------------
+  \
+   \   \_\_    _/_/
+    \      \__/
+           (oo)\_______
+           (__)\       )\/\
+               ||----w |
+               ||     ||
+ ___________________________________
+< Installing snap package: snapd... >
+ -----------------------------------
+   \
+    \  .——————.
+      .———.    \
+     (     )   +——\
+      `———´    |  |
+      |        |  |
+      |   __   +——/
+      \__/  \__/
+snap "snapd" is already installed, see 'snap help refresh'
+ ______________________________________
+< Installing snap package: marksman... >
+ --------------------------------------
+          \      (__)      
+           \     /oo|  
+            \   (_"_)*+++++++++*
+                   //I#\\\\\\\\I\
+                   I[I|I|||||I I `
+                   I`I'///'' I I
+                   I I       I I
+                   ~ ~       ~ ~
+                     Scowleton
+snap "marksman" is already installed, see 'snap help refresh'
+ _______________________________________
+/ Snap packages installed. Installation \
+\ complete!                             /
+ ---------------------------------------
+   \
+    \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+
+ _____________________________
+< Starting cleanup process... >
+ -----------------------------
+   \
+    \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+
+ ________________________________________
+/ Removing orphaned flatpak runtimes and \
+\ extensions...                          /
+ ----------------------------------------
+\                             .       .
+ \                           / `.   .' " 
+  \                  .---.  <    > <    >  .---.
+   \                 |    \  \ - ~ ~ - /  /    |
+         _____          ..-~             ~-..-~
+        |     |   \~~~\.'                    `./~~~/
+       ---------   \__/                        \__/
+      .'  O    \     /               /       \  " 
+     (_____,    `._.'               |         }  \/~~~/
+      `----.          /       }     |        /    \__/
+            `-.      |       /      |       /      `. ,~~|
+                ~-.__|      /_ - ~ ^|      /- _      `..-'   
+                     |     /        |     /     ~-.     `-. _  _  _
+                     |_____|        |_____|         ~ - . _ _ _ _ _>
+Nothing unused to uninstall
+ _______________________________
+/ Orphaned flatpak runtimes and \
+\ extensions removed            /
+ -------------------------------
+       \    ____
+        \  /    \
+          | ^__^ |
+          | (oo) |______
+          | (__) |      )\/\
+           \____/|----w |
+                ||     ||
+
+	         Moofasa
+ ____________________________________
+< Removing orphaned snap packages... >
+ ------------------------------------
+   \
+    \  .——————.
+      .———.    \
+     (     )   +——\
+      `———´    |  |
+      |        |  |
+      |   __   +——/
+      \__/  \__/
+ ________________________________
+< Orphaned snap packages removed >
+ --------------------------------
+   \
+    \              ....       
+           ........    .      
+          .            .      
+         .             .      
+.........              .......
+..............................
+
+Elephant inside ASCII snake
+ ___________________________________
+< Removing orphaned dnf packages... >
+ -----------------------------------
+  \                                  ,+*^^*+___+++_
+   \                           ,*^^^^              )
+    \                       _+*                     ^**+_
+     \                    +^       _ _++*+_+++_,         )
+              _+^^*+_    (     ,+*^ ^          \+_        )
+             {       )  (    ,(    ,_+--+--,      ^)      ^\
+            { (@)    } f   ,(  ,+-^ __*_*_  ^^\_   ^\       )
+           {:;-/    (_+*-+^^^^^+*+*<_ _++_)_    )    )      /
+          ( /  (    (        ,___    ^*+_+* )   <    <      \
+           U _/     )    *--<  ) ^\-----++__)   )    )       )
+            (      )  _(^)^^))  )  )\^^^^^))^*+/    /       /
+          (      /  (_))_^)) )  )  ))^^^^^))^^^)__/     +^^
+         (     ,/    (^))^))  )  ) ))^^^^^^^))^^)       _)
+          *+__+*       (_))^)  ) ) ))^^^^^^))^^^^^)____*^
+          \             \_)^)_)) ))^^^^^^^^^^))^^^^)
+           (_             ^\__^^^^^^^^^^^^))^^^^^^^)
+             ^\___            ^\__^^^^^^))^^^^^^^^)\\
+                  ^^^^^\uuu/^^\uuu/^^^^\^\^\^\^\^\^\^\
+                     ___) >____) >___   ^\_\_\_\_\_\_\)
+                    ^^^//\\_^^//\\_^       ^(\_\_\_\)
+                      ^^^ ^^ ^^^ ^
+Nothing to do.
+ ________________________________________
+/ Orphaned dnf packages removed. Cleanup \
+\ successful!                            /
+ ----------------------------------------
+   \
+    \              ....       
+           ........    .      
+          .            .      
+         .             .      
+.........              .......
+..............................
+
+Elephant inside ASCII snake
+ ________________________________________
+< All tasks completed! Enjoy your setup! >
+ ----------------------------------------
+  \     .    _  .    
+   \    |\_|/__/|    
+       / / \/ \  \  
+      /__|O||O|__ \ 
+     |/_ \_/\_/ _\ |  
+     | | (____) | ||  
+     \/\___/\__/  // 
+     (_/         ||
+      |          ||
+      |          ||\   
+       \        //_/  
+        \______//
+       __ || __||
+      (____(____)

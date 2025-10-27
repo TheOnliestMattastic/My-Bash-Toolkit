@@ -7,15 +7,14 @@
 #                 \/     \/          \/     \/             \/     \/        
 # /\        _____          __    __                   __  .__             /\
 # \ \      /     \ _____ _/  |__/  |______    _______/  |_|__| ____      / /
-#  \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\    / / 
-#   \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /  
-#    \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /   
+#  \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ __\    / /
+#   \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /
+#    \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /
 #     \/         \/     \/                \/     \/               \/  \/    
 #
 #                                presents,
 #
-#                                NEWbara:
-#                         A single-shot installer
+#                     NEWbara: A single-shot installer
 #                      for my personal Nobara system
 # --------------------------------------------------------------------------
 # Prerequisites:
@@ -28,11 +27,17 @@
 # 2. Make the script executable: chmod +x ./NEWbara.sh
 # 3. Run the script: ./NEWbara.sh [-d dnf_packages.txt] [-f flatpak_packages.txt] [-s snap_packages.txt]
 # --------------------------------------------------------------------------
+
+# --- Script safety net ---
+# Stop the script immediately if any command fails.
 set -e
 # Trap for error handling
+# If any command fails, echo the line number where it happened.
 trap 'echo "Error occurred at line $LINENO"' ERR
 
-# Check for required commands
+# --- Dependency Check ---
+# Before we start, let's make sure you have all the necessary tools.
+# This loop checks for dnf, flatpak, snap, and sudo.
 for cmd in dnf flatpak snap sudo; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
         echo "Error: $cmd not found. Please install it."
@@ -40,13 +45,13 @@ for cmd in dnf flatpak snap sudo; do
     fi
 done
 
-# Function to print short help
+# --- Help Functions ---
+# Need a quick reminder of how to use this script? This function is for you.
 short_help() {
     echo "Usage: $0 [-f flatpak_file.txt] [-s snap_file.txt] [-d dnf_file.txt] [-S] [-n] [-h|--help]"
-    echo ""
     echo "Options:"
-    echo "  -d FILE     Load DNF packages from FILE"
     echo "  -f FILE     Load Flatpak packages from FILE"
+    echo "  -d FILE     Load DNF packages from FILE"
     echo "  -s FILE     Load Snap packages from FILE"
     echo "  -S          Install Flatpaks system-wide"
     echo "  -n          Dry run (preview actions)"
@@ -54,7 +59,7 @@ short_help() {
     echo "  --help      Show detailed help"
 }
 
-# Function to print detailed help
+# For when you need more than just a quick reminder.
 print_help() {
     cat << EOF
 NAME
@@ -104,34 +109,42 @@ AUTHOR
 EOF
 }
 
-# Parse command-line options
+# --- Command-Line Options ---
+# Setting up the variables we'll use to store your choices.
 flatpak_file=""
 snap_file=""
 dnf_file=""
 system_flatpak=false
 dry_run=false
+# Create a log file with a timestamp to keep track of what happens.
 log_file="NEWbara_$(date +%Y%m%d_%H%M%S).log"
+
+# If you ask for help, we'll show it and then stop.
 if [[ $1 == "--help" ]]; then
     print_help
     exit 0
 fi
+
+# This loop goes through the options you provide when you run the script.
 while getopts "f:s:d:hSn" opt; do
 	case $opt in
-		f) flatpak_file="$OPTARG" ;;
-		s) snap_file="$OPTARG" ;;
-		d) dnf_file="$OPTARG" ;;
-		S) system_flatpak=true ;;
-		n) dry_run=true ;;
-		h) short_help; exit 0 ;;
-		*) echo "Usage: $0 [-f flatpak_file.txt] [-s snap_file.txt] [-d dnf_file.txt] [-S] [-n] [-h|--help]" >&2; exit 1 ;;
+		f) flatpak_file="$OPTARG" ;; # Use a custom list of Flatpaks
+		s) snap_file="$OPTARG" ;; # Use a custom list of Snaps
+		d) dnf_file="$OPTARG" ;; # Use a custom list of DNF packages
+		S) system_flatpak=true ;; # Install Flatpaks for all users
+		n) dry_run=true ;; # Just show what would be done, don't actually do it
+		h) short_help; exit 0 ;; # Show the quick help
+		*) echo "Usage: $0 [-f flatpak_file.txt] [-s snap_file.txt] [-d dnf_file.txt] [-S] [-n] [-h|--help]" >&2; exit 1 ;; # If you use an unknown option
     esac
 done
 
-# Set up logging
+# --- Logging Setup ---
+# This line sends all output to both the screen and the log file.
 exec > >(tee "$log_file") 2>&1
 
 # ---------------------------- CONFIGURATION -------------------------------
-# List of dnf packages
+# --- DNF Packages ---
+# This is your shopping list for dnf. Add or remove packages here.
 DNF_PKGS=(
     rclone
     syncthing
@@ -154,7 +167,8 @@ DNF_PKGS=(
     love
 )
 
-# List of flatpak packages (use app ID for stability, e.g., org.videolan.VLC)
+# --- Flatpak Packages ---
+# Same as above, but for Flatpaks. Use the full app ID.
 FLAT_PKGS=(
  "md.obsidian.Obsidian"
  "com.super_productivity.SuperProductivity"
@@ -168,41 +182,30 @@ FLAT_PKGS=(
  "com.jetpackduba.Gitnuro"
 )
 
-# List of snap packages
+# --- Snap Packages ---
+# And here's the list for Snap packages.
 SNAP_PKGS=(
-    snapd
     marksman
 )
 
-# Load packages from files if specified
+# --- Loading Custom Package Lists ---
+# If you provided a file for dnf packages, we'll use that instead of the list above.
 if [ -n "$dnf_file" ]; then
     mapfile -t DNF_PKGS < "$dnf_file"
 fi
+# Same for Flatpaks.
 if [ -n "$flatpak_file" ]; then
     mapfile -t FLAT_PKGS < "$flatpak_file"
 fi
+# And for Snaps.
 if [ -n "$snap_file" ]; then
     mapfile -t SNAP_PKGS < "$snap_file"
 fi
 
 # ------------------------ END OF CONFIGURATION ----------------------------
-# Check for sudo
-if ! command -v sudo >/dev/null 2>&1; then
-   echo "sudo not found. Please install sudo."
-   exit 1
-fi
-
-# Install dnf packages
-for pkg in "${DNF_PKGS[@]}"; do
-    echo "Installing dnf package: $pkg..."
-    if [ "$dry_run" = true ]; then
-      echo "[DRY RUN] Would run: sudo dnf --assumeyes --quiet install $pkg"
-   else
-      sudo dnf --assumeyes --quiet install "$pkg"
-   fi
-done
-
-# Function to display messages with optional xcowsay and lolcat
+# --- Fun Message Function ---
+# A little function to make the output more interesting.
+# It checks if you have cowsay and lolcat installed and uses them if you do.
 hasCow=$(which cowsay)
 hasLolcat=$(which lolcat)
 moo() {
@@ -218,28 +221,26 @@ moo() {
 	fi
 }
 
-moo "dnf packages installed!"
+# --- Flatpak Setup ---
+# We need to make sure the Flathub repository is set up for the user.
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Ensure flathub is present
-if [ "$system_flatpak" = true ]; then
-	flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-else
-	flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-fi
-
-# Install flatpaks
+# --- Flatpak Installation ---
+# Now, let's install the Flatpaks from your list.
 for pkg in "${FLAT_PKGS[@]}"; do
-    echo "Installing flatpak: $pkg..."
+    moo "Installing flatpak: $pkg..."
     if [ "$dry_run" = true ]; then
        if [ "$system_flatpak" = true ]; then
-          echo "[DRY RUN] Would run: flatpak install --assumeyes flathub $pkg"
+          moo "[DRY RUN] Would run: flatpak install --assumeyes flathub $pkg"
        else
-          echo "[DRY RUN] Would run: flatpak install --user --assumeyes flathub $pkg"
+          moo "[DRY RUN] Would run: flatpak install --user --assumeyes flathub $pkg"
        fi
     else
         if [ "$system_flatpak" = true ]; then
-            flatpak install --assumeyes flathub "$pkg" || echo "Warning: Issue with $pkg (possibly already installed), continuing..."
+            # Installing for all users.
+            flatpak install --system --assumeyes flathub "$pkg" || echo "Warning: Issue with $pkg (possibly already installed), continuing..."
         else
+            # Installing just for you.
             flatpak install --user --assumeyes flathub "$pkg" || echo "Warning: Issue with $pkg (possibly already installed), continuing..."
         fi
     fi
@@ -247,22 +248,53 @@ done
 
 moo "Flatpaks installed!"
 
-# Install snap packages
+# --- Sudo Check ---
+# We need sudo to install some things. Let's make sure it's available.
+if ! command -v sudo >/dev/null 2>&1; then
+   moo "sudo not found. Please install sudo."
+   exit 1
+fi
+
+# --- DNF Package Installation ---
+# Time to install the dnf packages from your list.
+for pkg in "${DNF_PKGS[@]}"; do
+moo "Installing dnf package: $pkg..."
+if [ "$dry_run" = true ]; then
+      moo "[DRY RUN] Would run: sudo dnf --assumeyes --quiet install $pkg"
+   else
+      # This is where the magic happens for dnf.
+      sudo dnf --assumeyes --quiet install "$pkg"
+   fi
+done
+
+
+
+moo "DNF packages installed!"
+
+# --- Snap Package Installation ---
+# First, let's ensure snapd is installed.
+if ! dnf list --installed snapd >/dev/null 2>&1; then
+    sudo dnf --assumeyes --quiet install snapd
+fi
+
+# Finally, the Snap packages.
 for pkg in "${SNAP_PKGS[@]}"; do
     moo "Installing snap package: $pkg..."
     if [ "$dry_run" = true ]; then
-      echo "[DRY RUN] Would run: sudo snap install $pkg"
+      moo "[DRY RUN] Would run: sudo snap install $pkg"
    else
+      # Installing the snap.
       sudo snap install "$pkg"
    fi
 done
 
 moo "Snap packages installed. Installation complete!"
 
-# Cleanup
+# --- Cleanup ---
+# Let's tidy up a bit.
 moo "Starting cleanup process..."
 
-# Remove orphaned flatpak runtimes and extensions
+# Remove unused Flatpak runtimes.
 moo "Removing orphaned flatpak runtimes and extensions..."
 if [ "$system_flatpak" = true ]; then
     flatpak uninstall --assumeyes --unused
@@ -272,15 +304,15 @@ fi
 
 moo "Orphaned flatpak runtimes and extensions removed"
 
-# Remove orphaned snap packages
+# Remove disabled Snap packages.
 moo "Removing orphaned snap packages..."
-for orphan in $(snap list --all | awk '$6 == "disabled" {print $1}'); do
+for orphan in $(snap list --all | awk 	'$6 == "disabled" {print $1}'); do
 snap remove --purge --yes "$orphan"
 done
 
 moo "Orphaned snap packages removed"
 
-# Remove orphaned dnf packages
+# Remove dnf packages that are no longer needed.
 moo "Removing orphaned dnf packages..."
 sudo dnf autoremove --assumeyes --quiet
 
