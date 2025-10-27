@@ -34,7 +34,7 @@ This repository contains `NEWbara.sh`, a Bash script designed to bootstrap a fre
 - **Non-Interactive**: Runs fully automated with fallback error handling.
 - **Cleanup**: Removes orphaned packages post-installation.
 
-## 📋 Requirements
+## ⚛️ Requirements
 
 - Nobara or Fedora Linux (minimum version 36 for compatibility).
 - `sudo` access for DNF and Snap installations.
@@ -75,7 +75,7 @@ See `./NEWbara.sh --help` for full options.
 - [ ] **Update-Only Mode (-u)**: Only update existing packages, skip fresh installs.
 - [ ] **Minimal Impact Mode**: Skip cleanup or optional steps for quick runs.
 
-## 🤝 Contributing
+## 🌌 Contributing
 
 Contributions are welcome! Please open issues for bugs or feature requests, and submit pull requests for code changes.
 
