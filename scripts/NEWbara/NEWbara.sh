@@ -32,6 +32,14 @@ set -e
 # Trap for error handling
 trap 'echo "Error occurred at line $LINENO"' ERR
 
+# Check for required commands
+for cmd in dnf flatpak snap sudo; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "Error: $cmd not found. Please install it."
+        exit 1
+    fi
+done
+
 # Function to print short help
 short_help() {
     echo "Usage: $0 [-f flatpak_file.txt] [-s snap_file.txt] [-d dnf_file.txt] [-S] [-n] [-h|--help]"
@@ -102,7 +110,7 @@ snap_file=""
 dnf_file=""
 system_flatpak=false
 dry_run=false
-log_file="install_$(date +%Y%m%d_%H%M%S).log"
+log_file="NEWbara_$(date +%Y%m%d_%H%M%S).log"
 if [[ $1 == "--help" ]]; then
     print_help
     exit 0
@@ -125,45 +133,45 @@ exec > >(tee "$log_file") 2>&1
 # ---------------------------- CONFIGURATION -------------------------------
 # List of dnf packages
 DNF_PKGS=(
-	rclone
-	syncthing
-	shfmt
-	shellcheck
-	nodejs-bash-language-server
-	nvtop
-	htop
-	cbonsai
-	piper
-	tealdeer
-	clamav
-	clamav-freshclam
-	psutils
-	toilet
-	figlet
-	lolcat
-	cowsay
-	xcowsay
-	love
+    rclone
+    syncthing
+    shfmt
+    shellcheck
+    nodejs-bash-language-server
+    nvtop
+    htop
+    cbonsai
+    piper
+    tealdeer
+    clamav
+    clamav-freshclam
+    psutils
+    toilet
+    figlet
+    lolcat
+    cowsay
+    xcowsay
+    love
 )
 
 # List of flatpak packages (use app ID for stability, e.g., org.videolan.VLC)
 FLAT_PKGS=(
-	"md.obsidian.Obsidian"
-	"com.super_productivity.SuperProductivity"
-	"io.github.nokse22.asciidraw"
-	"org.videolan.VLC"
-	"org.kde.krita"
-	"org.godotengine.Godot"
-	"org.libretro.RetroArch"
-	"eu.betterbird.Betterbird"
-	"org.bleachbit.BleachBit"
-	"com.jetpackduba.Gitnuro"
+ "md.obsidian.Obsidian"
+ "com.super_productivity.SuperProductivity"
+ "io.github.nokse22.asciidraw"
+ "org.videolan.VLC"
+ "org.kde.krita"
+ "org.godotengine.Godot"
+ "org.libretro.RetroArch"
+ "eu.betterbird.Betterbird"
+ "org.bleachbit.BleachBit"
+ "com.jetpackduba.Gitnuro"
 )
 
 # List of snap packages
 SNAP_PKGS=(
-	snapd
-	marksman
+    snapd
+    marksman
 )
 
 # Load packages from files if specified
@@ -186,12 +194,12 @@ fi
 
 # Install dnf packages
 for pkg in "${DNF_PKGS[@]}"; do
-echo "Installing dnf package: $pkg..."
-if [ "$dry_run" = true ]; then
-		echo "[DRY RUN] Would run: sudo dnf --assumeyes --quiet install $pkg"
-	else
-		sudo dnf --assumeyes --quiet install "$pkg"
-	fi
+    echo "Installing dnf package: $pkg..."
+    if [ "$dry_run" = true ]; then
+      echo "[DRY RUN] Would run: sudo dnf --assumeyes --quiet install $pkg"
+   else
+      sudo dnf --assumeyes --quiet install "$pkg"
+   fi
 done
 
 # Function to display messages with optional xcowsay and lolcat
@@ -221,32 +229,32 @@ fi
 
 # Install flatpaks
 for pkg in "${FLAT_PKGS[@]}"; do
-echo "Installing flatpak: $pkg..."
-if [ "$dry_run" = true ]; then
-	if [ "$system_flatpak" = true ]; then
-		echo "[DRY RUN] Would run: flatpak install --assumeyes flathub $pkg"
-	else
-		echo "[DRY RUN] Would run: flatpak install --user --assumeyes flathub $pkg"
-	fi
-else
-	if [ "$system_flatpak" = true ]; then
-	flatpak install --assumeyes flathub "$pkg"; # || echo "Warning: Issue with $pkg (possibly already installed), continuing..."
-	else
-	flatpak install --user --assumeyes flathub "$pkg"; # || echo "Warning: Issue with $pkg (possibly already installed), continuing..."
-	fi
-fi
+    echo "Installing flatpak: $pkg..."
+    if [ "$dry_run" = true ]; then
+       if [ "$system_flatpak" = true ]; then
+          echo "[DRY RUN] Would run: flatpak install --assumeyes flathub $pkg"
+       else
+          echo "[DRY RUN] Would run: flatpak install --user --assumeyes flathub $pkg"
+       fi
+    else
+        if [ "$system_flatpak" = true ]; then
+            flatpak install --assumeyes flathub "$pkg" || echo "Warning: Issue with $pkg (possibly already installed), continuing..."
+        else
+            flatpak install --user --assumeyes flathub "$pkg" || echo "Warning: Issue with $pkg (possibly already installed), continuing..."
+        fi
+    fi
 done
 
 moo "Flatpaks installed!"
 
 # Install snap packages
 for pkg in "${SNAP_PKGS[@]}"; do
-moo "Installing snap package: $pkg..."
-if [ "$dry_run" = true ]; then
-		echo "[DRY RUN] Would run: sudo snap install $pkg"
-	else
-		sudo snap install "$pkg"
-	fi
+    moo "Installing snap package: $pkg..."
+    if [ "$dry_run" = true ]; then
+      echo "[DRY RUN] Would run: sudo snap install $pkg"
+   else
+      sudo snap install "$pkg"
+   fi
 done
 
 moo "Snap packages installed. Installation complete!"
@@ -266,7 +274,7 @@ moo "Orphaned flatpak runtimes and extensions removed"
 
 # Remove orphaned snap packages
 moo "Removing orphaned snap packages..."
-for orphan in $(snap list --all | awk '$6 == "disabled" {print $1}' | head -n 1); do
+for orphan in $(snap list --all | awk '$6 == "disabled" {print $1}'); do
 snap remove --purge --yes "$orphan"
 done
 

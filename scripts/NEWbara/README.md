@@ -34,6 +34,12 @@ This repository contains `NEWbara.sh`, a Bash script designed to bootstrap a fre
 - **Non-Interactive**: Runs fully automated with fallback error handling.
 - **Cleanup**: Removes orphaned packages post-installation.
 
+## 📋 Requirements
+
+- Nobara or Fedora Linux (minimum version 36 for compatibility).
+- `sudo` access for DNF and Snap installations.
+- Flatpak and Snap package managers installed (script will verify).
+
 ## 🚀 Blasting Off
 
 Clone the repository:
@@ -69,11 +75,13 @@ See `./NEWbara.sh --help` for full options.
 - [ ] **Update-Only Mode (-u)**: Only update existing packages, skip fresh installs.
 - [ ] **Minimal Impact Mode**: Skip cleanup or optional steps for quick runs.
 
-Contributions and feature requests are welcome!
+## 🤝 Contributing
+
+Contributions are welcome! Please open issues for bugs or feature requests, and submit pull requests for code changes.
 
 ## 🌕 Notes
 
-- Designed for Nobara/Fedora; tweak for other distros.
+- Designed for Nobara/Fedora (minimum version 36); tweak for other distros.
 - Requires `sudo` for DNF/Snap installs; run as regular user.
 - Flatpaks default to user mode (recommended by Nobara wiki).
 - Logs are saved as `NEWbara_YYYYMMDD_HHMMSS.log`.
