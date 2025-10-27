@@ -139,13 +139,15 @@ while getopts "f:s:d:hSn" opt; do
 done
 
 # --- Logging Setup ---
-# This line sends all output to both the screen and the log file.
-exec > >(tee "$log_file") 2>&1
+# This line sends command output to both the screen and the log file.
+exec > >(tee \"$log_file\") 2>&1
 
 # ---------------------------- CONFIGURATION -------------------------------
 # --- DNF Packages ---
 # This is your shopping list for dnf. Add or remove packages here.
 DNF_PKGS=(
+    lolcat
+    cowsay
     rclone
     syncthing
     shfmt
@@ -161,8 +163,6 @@ DNF_PKGS=(
     psutils
     toilet
     figlet
-    lolcat
-    cowsay
     xcowsay
     love
 )
@@ -206,20 +206,42 @@ fi
 # --- Fun Message Function ---
 # A little function to make the output more interesting.
 # It checks if you have cowsay and lolcat installed and uses them if you do.
-hasCow=$(which cowsay)
-hasLolcat=$(which lolcat)
 moo() {
 	local msg="$1"
-	if [ -z "$hasCow" ] && [ -z "$hasLolcat" ]; then
-		echo "$msg"
-	elif [ -z "$hasCow" ]; then
-		echo "$msg" | lolcat
-	elif [ -z "$hasLolcat" ]; then
-		echo "$msg" | cowsay -r
+	# Log plain message
+	echo "$msg" >> "$log_file"
+	# Fun output to terminal
+	if command -v cowsay >/dev/null 2>&1 && command -v lolcat >/dev/null 2>&1; then
+		echo "$msg" | cowsay -r | lolcat > /dev/tty # bypass stdout pipe to preserve colors in terminal
+	elif command -v lolcat >/dev/null 2>&1; then
+		echo "$msg" | lolcat > /dev/tty # bypass stdout pipe to preserve colors in terminal
+	elif command -v cowsay >/dev/null 2>&1; then
+		echo "$msg" | cowsay -r > /dev/tty # bypass stdout pipe 
 	else
-		echo "$msg" | cowsay -r | lolcat
+		echo "$msg" > /dev/tty
 	fi
 }
+
+# --- Sudo Check ---
+# We need sudo to install some things. Let's make sure it's available.
+if ! command -v sudo >/dev/null 2>&1; then
+   moo "sudo not found. Please install sudo."
+   exit 1
+fi
+
+# --- DNF Package Installation ---
+# Time to install the dnf packages from your list.
+for pkg in "${DNF_PKGS[@]}"; do
+moo "Installing dnf package: $pkg..."
+if [ "$dry_run" = true ]; then
+      moo "[DRY RUN] Would run: sudo dnf --assumeyes --quiet install $pkg"
+   else
+      # This is where the magic happens for dnf.
+      sudo dnf --assumeyes --quiet install "$pkg"
+   fi
+done
+
+moo "DNF packages installed!"
 
 # --- Flatpak Setup ---
 # We need to make sure the Flathub repository is set up for the user.
@@ -247,29 +269,6 @@ for pkg in "${FLAT_PKGS[@]}"; do
 done
 
 moo "Flatpaks installed!"
-
-# --- Sudo Check ---
-# We need sudo to install some things. Let's make sure it's available.
-if ! command -v sudo >/dev/null 2>&1; then
-   moo "sudo not found. Please install sudo."
-   exit 1
-fi
-
-# --- DNF Package Installation ---
-# Time to install the dnf packages from your list.
-for pkg in "${DNF_PKGS[@]}"; do
-moo "Installing dnf package: $pkg..."
-if [ "$dry_run" = true ]; then
-      moo "[DRY RUN] Would run: sudo dnf --assumeyes --quiet install $pkg"
-   else
-      # This is where the magic happens for dnf.
-      sudo dnf --assumeyes --quiet install "$pkg"
-   fi
-done
-
-
-
-moo "DNF packages installed!"
 
 # --- Snap Package Installation ---
 # First, let's ensure snapd is installed.
