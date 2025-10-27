@@ -11,21 +11,43 @@
 #   \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /  
 #    \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /   
 #     \/         \/     \/                \/     \/               \/  \/    
-#
 #                                presents,
 #
-#                             myLoginScript:
-#                  A script to run when I... well, login
+#                             changeCase:
+#         rename first char of each dir or file with upper or lower case
 # --------------------------------------------------------------------------
-# Prerequisites:
-# - OpenRGB installed and configured with a profile named `Home`
-# - xcowsay installed (for the cow greeting)
-#
 # How to use this script:
-# 1. Place this script in your login scripts directory (e.g., ~/.config/autostart-scripts/),
-#    or configure system settings to run this script at login
-# 2. Make the script executable: chmod +x myLoginScript.sh
+# 0. (Optional) Edit the package lists below to suit your needs.
+# 1. Make the script executable: chmod +x changeCase.sh
+# Usage: ./changeCase [options] [path]
 # --------------------------------------------------------------------------
 set -e
-openrgb -p Home
-xcowfortune --time=0 --release&
+# Defaults
+DEFAULT_PATH="$PWD"
+MODE="dirs"
+
+# Parse arguments
+while getOpts "p:d:f" opt; do
+  case $opt in
+  p)
+    DEFAULT_PATH="$OPTARG"
+    ;;
+  d)
+    MODE="dirs"
+    ;;
+  f)
+    MODE="files"
+    ;;
+  *)
+    cowsay "I am Error: Invalid Option $OPTARG. Use -p for path, -d for dirs, or -f for files" | lolcat
+    exit 1
+    ;;
+  esac
+done
+
+for d in *; do
+  if [ -d "$d" ]; then
+    newname=$(echo "$d" | sed -E 's/^(.)/\L\1/')
+    [ "$d" != "$newname" ] && mv -v "$d" "$newname"
+  fi
+done
