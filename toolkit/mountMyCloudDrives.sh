@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
-# !!!!! REQUIRES rclone configured with remotes named                  !!!!!
 # ___________.__             ________         .__  .__                 __   
 # \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_ 
 #   |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\
 #   |    |   |   Y  \  ___/  /    |    \   |  \  |_|  \  ___/ \___ \  |  |  
 #   |____|   |___|  /\___  > \_______  /___|  /____/__|\___  >____  > |__|  
 #                 \/     \/          \/     \/             \/     \/        
-#    _____          __    __                   __  .__                      
-#   /     \ _____ _/  |__/  |______    _______/  |_|__| ____                
-#  /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\               
-# /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___               
-# \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  >              
-#         \/     \/                \/     \/               \/               
+# /\        _____          __    __                   __  .__             /\
+# \ \      /     \ _____ _/  |__/  |______    _______/  |_|__| ____      / /
+#  \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\    / / 
+#   \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /  
+#    \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /   
+#     \/         \/     \/                \/     \/               \/  \/    
 #
 #                                presents,
 #
@@ -19,11 +18,13 @@
 #               A script to... well, mount my cloud drives
 #                               via rclone
 # --------------------------------------------------------------------------
+# Prerequisites:
+# - RCLONE MUST BE INSTALLED AND CONFIGURED WITH REMOTES NAMED `OneDrive`, `GoogleDrive`, AND `Dropbox`
+# - Local mount directories must be empty or non-existent
+#
 # How to use this script:
-# 1. Ensure you have rclone installed and configured with remotes named 
-#    `OneDrive`, `GoogleDrive`, and `Dropbox`, or change the script accordingly.
-# 2. Ensure the local mount directories are empty or do not exist.
-# 3. Make the script executable: chmod +x mountMyCloudDrives.sh
+# 1. Make the script executable: chmod +x mountMyCloudDrives.sh
+# 2. Run the script: ./mountMyCloudDrives.sh
 # Pro tip:
 # - You may want to set this script to run at login for convenience by placing
 #   it in your login scripts directory (e.g., ~/.config/autostart-scripts/) or
