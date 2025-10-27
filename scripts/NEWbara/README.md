@@ -40,7 +40,7 @@ Clone the repository:
 
 ```sh
 git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
-cd My-Bash-Toolkit/toolkit
+cd My-Bash-Toolkit/scripts/NEWbara
 ```
 
 Make the script executable and run:

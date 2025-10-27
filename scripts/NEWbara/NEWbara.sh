@@ -108,14 +108,14 @@ if [[ $1 == "--help" ]]; then
     exit 0
 fi
 while getopts "f:s:d:hSn" opt; do
-case $opt in
-f) flatpak_file="$OPTARG" ;;
-s) snap_file="$OPTARG" ;;
-d) dnf_file="$OPTARG" ;;
-S) system_flatpak=true ;;
-    n) dry_run=true ;;
-        h) short_help; exit 0 ;;
-        *) echo "Usage: $0 [-f flatpak_file.txt] [-s snap_file.txt] [-d dnf_file.txt] [-S] [-n] [-h|--help]" >&2; exit 1 ;;
+	case $opt in
+		f) flatpak_file="$OPTARG" ;;
+		s) snap_file="$OPTARG" ;;
+		d) dnf_file="$OPTARG" ;;
+		S) system_flatpak=true ;;
+		n) dry_run=true ;;
+		h) short_help; exit 0 ;;
+		*) echo "Usage: $0 [-f flatpak_file.txt] [-s snap_file.txt] [-d dnf_file.txt] [-S] [-n] [-h|--help]" >&2; exit 1 ;;
     esac
 done
 
@@ -226,7 +226,7 @@ if [ "$dry_run" = true ]; then
 	if [ "$system_flatpak" = true ]; then
 		echo "[DRY RUN] Would run: flatpak install --assumeyes flathub $pkg"
 	else
-		echo "[DRY RUN] Would run: flatpak install --user --assumeye flathub $pkg"
+		echo "[DRY RUN] Would run: flatpak install --user --assumeyes flathub $pkg"
 	fi
 else
 	if [ "$system_flatpak" = true ]; then
@@ -266,7 +266,7 @@ moo "Orphaned flatpak runtimes and extensions removed"
 
 # Remove orphaned snap packages
 moo "Removing orphaned snap packages..."
-for orphan in $(snap list --all | awk '$6 == "disabled" {print $1}'); do
+for orphan in $(snap list --all | awk '$6 == "disabled" {print $1}' | head -n 1); do
 snap remove --purge --yes "$orphan"
 done
 
