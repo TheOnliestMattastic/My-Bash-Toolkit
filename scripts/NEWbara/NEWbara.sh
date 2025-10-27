@@ -21,6 +21,7 @@
 # Prerequisites:
 # - MUST RUN AS REGULAR USER (NOT SUDO/ROOT) TO USE THE `--user` FLATPAK FLAG
 # - You will still be prompted for your password for dnf installs
+# - This script is licensed under the GNU General Public License v3.0
 #
 # How to use this script:
 # 1. (Optional) Edit the package lists below or provide files with -d, -f, -s flags.
