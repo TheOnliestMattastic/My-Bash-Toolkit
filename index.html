@@ -68,19 +68,22 @@ ___________.__             ________         .__  .__                 __
         </p>
       </div>
 
-      <!-- installMyPackages -->
+      <!-- NEWbara -->
       <div class="project-card">
-        <h2>📡 installMyPackages.sh</h2>
+        <h2>🐧 NEWbara.sh</h2>
         <p class="buttons card">
           <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
           <a href="https://docs.fedoraproject.org/en-US/quick-docs/dnf/" target="_blank"><img alt="DNF" src="https://img.shields.io/badge/Package-dnf-bd93f9?logo=fedora&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://flatpak.org/" target="_blank"><img src="https://img.shields.io/badge/Flatpak-Installer-bd93f9?logo=flatpak&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://flatpak.org/" target="_blank"><img alt="Flatpak" src="https://img.shields.io/badge/Flatpak-Installer-bd93f9?logo=flatpak&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://snapcraft.io/" target="_blank"><img alt="Snap" src="https://img.shields.io/badge/Snap-Packages-bd93f9?logo=snapcraft&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
         </p>
-        <p><strong>Purpose:</strong> Quickly bootstraps a fresh Nobara/Fedora system with all my essential tools and apps.</p>
+        <p><strong>Purpose:</strong> Comprehensive system bootstrapper for Nobara/Fedora with multi-package manager support and advanced features.</p>
         <ul>
-          <li>Installs a curated list of <code>dnf</code> packages (e.g., rclone, syncthing, htop, clamav, cowsay).</li>
-          <li>Installs Flatpak apps (e.g., Obsidian, Krita, Godot, RetroArch, Rider).</li>
-          <li>Automatically adds the Flathub remote if missing.</li>
+          <li><strong>Multi-Package Manager:</strong> Installs via DNF, Flatpak, and Snap with user/system Flatpak modes.</li>
+          <li><strong>Custom Package Lists:</strong> Load packages from text files for DNF, Flatpak, and Snap.</li>
+          <li><strong>Dry Run Mode:</strong> Preview installations without making changes.</li>
+          <li><strong>Automatic Logging:</strong> Logs all output to timestamped files for troubleshooting.</li>
+          <li><strong>Smart Cleanup:</strong> Removes orphaned packages and unused runtimes post-installation.</li>
         </ul>
       </div>
 
@@ -115,9 +118,9 @@ ___________.__             ________         .__  .__                 __
         </ul>
       </div>
 
-      <!-- scheduleIautoCommands -->
+      <!-- don'Type -->
       <div class="project-card">
-        <h2>🤖 scheduleIautoCommands.sh</h2>
+        <h2>🤖 don'Type.sh</h2>
         <p class="buttons card">
           <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
           <a href="https://github.com/jordansissel/xdotool" target="_blank"><img src="https://img.shields.io/badge/Automation-xdotool-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
@@ -127,6 +130,20 @@ ___________.__             ________         .__  .__                 __
           <li>Uses <code>xdotool</code> to bind teleport and utility commands to function keys (F1–F12).</li>
           <li>Runs after a short delay so you can switch to the game window.</li>
           <li>Completes setup in ~30 seconds without manual typing.</li>
+        </ul>
+      </div>
+
+      <!-- changeCase -->
+      <div class="project-card">
+        <h2>🔤 changeCase.sh</h2>
+        <p class="buttons card">
+          <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        </p>
+        <p><strong>Purpose:</strong> Batch rename directories and files by changing the case of their first character.</p>
+        <ul>
+          <li>Converts the first character of directory/file names to lowercase.</li>
+          <li>Supports command-line options for custom paths and filtering by type.</li>
+          <li>Safe operation with verbose output showing only actual changes.</li>
         </ul>
       </div>
 
