@@ -50,7 +50,7 @@ rclone --vfs-cache-mode full mount Dropbox: "$DROPBOX" &
 sleep 60s
 
 # Create array and track failures
-failures()
+failures=()
 
 ! findmnt -M "$ONEDRIVE" && failures+="OneDrive"
 ! findmnt -M "$GOOGLEDRIVE" && failures+="GooooogleDrive"
