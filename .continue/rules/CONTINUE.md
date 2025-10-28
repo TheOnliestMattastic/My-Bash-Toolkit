@@ -85,10 +85,7 @@ The project consists of individual, self-contained Bash scripts. Each script is 
 
 **Contribution Guidelines:**
 
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes and commit them with descriptive commit messages.
-4. Submit a pull request.
+Show and ask permission before implementing any changes. 
 
 ## 5. Key Concepts
 
