@@ -55,3 +55,5 @@ config/secrets.json
 
 # AI
 GEMINI.md
+.continue
+CONTINUE.md
