@@ -30,7 +30,18 @@
 #   it in your login scripts directory (e.g., ~/.config/autostart-scripts/) or
 #   configuring system settings to run this script at login.
 # --------------------------------------------------------------------------
-set -e
+set -eu
+# Check for required commands
+command -v rclone >/dev/null 2>&1 || { echo "Error: rclone is not installed."; exit 1; }
+command -v findmnt >/dev/null 2>&1 || { echo "Error: findmnt is not installed."; exit 1; }
+command -v xcowsay >/dev/null 2>&1 || { echo "Error: xcowsay is not installed."; exit 1; }
+# Cleanup function to kill background rclone processes on exit
+cleanup() {
+    [ -n "$ONEDRIVE_PID" ] && kill "$ONEDRIVE_PID" 2>/dev/null || true
+    [ -n "$GOOGLEDRIVE_PID" ] && kill "$GOOGLEDRIVE_PID" 2>/dev/null || true
+    [ -n "$DROPBOX_PID" ] && kill "$DROPBOX_PID" 2>/dev/null || true
+}
+trap cleanup ERR
 # Define mount directories
 ONEDRIVE="/home/mattastic/OneDrive"
 GOOGLEDRIVE="/home/mattastic/GoogleDrive"
@@ -43,8 +54,11 @@ mkdir -p "$DROPBOX"
 
 # Mount directories using rclone
 rclone --vfs-cache-mode full mount OneDrive: "$ONEDRIVE" &
+ONEDRIVE_PID=$!
 rclone --vfs-cache-mode full mount GoogleDrive: "$GOOGLEDRIVE" &
+GOOGLEDRIVE_PID=$!
 rclone --vfs-cache-mode full mount Dropbox: "$DROPBOX" &
+DROPBOX_PID=$!
 
 # Wait for mounts to establish
 sleep 60s
@@ -52,17 +66,17 @@ sleep 60s
 # Create array and track failures
 failures=()
 
-! findmnt -M "$ONEDRIVE" && failures+="OneDrive"
-! findmnt -M "$GOOGLEDRIVE" && failures+="GooooogleDrive"
-! findmnt -M "$DROPBOX" && failures+="Dropbox"
+! findmnt -M "$ONEDRIVE" && failures+=("OneDrive")
+! findmnt -M "$GOOGLEDRIVE" && failures+=("GooooogleDrive")
+! findmnt -M "$DROPBOX" && failures+=("Dropbox")
 
 # Notify user of success or failure
 if [ ${#failures[@]} -eq 0 ]; then
 	xcowsay "Mooooooo!: OneDrive, GooooogleDrive, and Dropbox successfully mounted!" &
 elif [ ${#failures[@]} -eq 1 ]; then
-	xcowsay --time=0 --release "I am Error: ${#failures[0]} failed to connect!" &
+	xcowsay --time=0 --release "I am Error: ${failures[0]} failed to connect!" &
 elif [ ${#failures[@]} -eq 2 ]; then
-	xcowsay --time=0 --release "I am Error: ${#failures[0]} and ${#failures[1]} failed to connect!" &
+	xcowsay --time=0 --release "I am Error: ${failures[0]} and ${failures[1]} failed to connect!" &
 else
 	xcowsay --time=0 --release "I am Error: All drives failed to connect!" &
 fi
