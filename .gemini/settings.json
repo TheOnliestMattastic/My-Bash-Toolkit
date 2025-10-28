@@ -1,0 +1,24 @@
+{
+  "description": "A personal collection of Bash scripts for automating and streamlining a Linux workflow, accompanied by a public-facing portfolio website.",
+  "ignore": {
+    "paths": [
+      ".git/",
+      "assets/icons/"
+    ]
+  },
+  "dependencies": {
+    "manager": "None",
+    "requirements": [
+      "bash",
+      "dnf",
+      "flatpak",
+      "snap",
+      "rclone",
+      "openrgb",
+      "xcowsay",
+      "xdotool",
+      "lolcat",
+      "cowsay"
+    ]
+  }
+}
