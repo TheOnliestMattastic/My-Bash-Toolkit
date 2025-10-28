@@ -1,8 +1,18 @@
+<!--
+  REMINDERS:
+  - This is the HTML document that displays the Bash Toolkit website
+  - Head section contains metadata, styles, and icons (things browsers need to know)
+  - Body section contains the actual visible content
+  - Each section is clearly marked with comments for easy navigation
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- REMINDER: Basic HTML setup - tells browser this is an HTML5 page in English -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- REMINDER: Links to the CSS file that makes everything look pretty -->
     <link rel="stylesheet" href="style.css" />
 
     <!-- Favicon and App Icons -->
@@ -19,31 +29,39 @@
     <meta name="description" content="A curated collection of automation scripts for Linux systems">
   </head>
 
+  <!-- REMINDER: Everything below this line is what users actually see on the webpage -->
   <body>
 
+    <!-- HEADER SECTION: Top of page with branding and navigation -->
     <header>
-      <button id="theme-toggle" aria-label="Toggle theme">🌞</button>
-      <pre class="ascii-logo"><code>
-___________.__             ________         .__  .__                 __   
-\__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_ 
-  |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\
-  |    |   |   Y  \  ___/  /    |    \   |  \  |_|  \  ___/ \___ \  |  |  
-  |____|   |___|  /\___  > \_______  /___|  /____/__|\___  >____  > |__|  
-                \/     \/          \/     \/             \/     \/        
-   _____          __    __                   __  .__                      
-  /     \ _____ _/  |__/  |______    _______/  |_|__| ____                
- /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\               
-/    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___               
-\____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  >              
-        \/     \/                \/     \/               \/               </code></pre>
 
+      <!-- REMINDER: Theme toggle button - switches between light/dark mode -->
+      <button id="theme-toggle" aria-label="Toggle theme">🌞</button>
+
+      <!-- REMINDER: Fancy ASCII art logo - makes the page look cool -->
+      <pre class="ascii-logo"><code>
+        ___________.__             ________         .__  .__                 __    
+        \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_  
+          |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\ 
+          |    |   |   Y  \  ___/  /    |    \   |  \  |_|  \  ___/ \___ \  |  |   
+          |____|   |___|  /\___  > \_______  /___|  /____/__|\___  >____  > |__|   
+                        \/     \/          \/     \/             \/     \/         
+        /\        _____          __    __                   __  .__             /\ 
+        \ \      /     \ _____ _/  |__/  |______    _______/  |_|__| ____      / / 
+         \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\    / /  
+          \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /   
+           \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /    
+            \/         \/     \/                \/     \/               \/  \/     </code></pre>
+
+      <!-- REMINDER: Main title and subtitle - tells visitors what this website is about -->
       <h1>🧰 My Bash Toolkit</h1>
       <h2>A curated collection of automation scripts for Linux systems</h2>
 
+      <!-- REMINDER: GitHub stats badges - shows repository info like last commit, size, etc. -->
       <!-- Project Badges -->
       <div class="buttons">
         <!-- Last Commit -->
-        <img src="https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
+        <img alt="Last Commit" src="https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
         <!-- Repo Size -->
         <img alt="Repo Size" src="https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
         <!-- Code Size -->
@@ -51,7 +69,7 @@ ___________.__             ________         .__  .__                 __
         <!-- Source Code-->
         <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit"><img alt="Source Code" src="https://img.shields.io/badge/GitHub-Code-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4"></a>
         <!-- License -->
-        <img src="https://img.shields.io/badge/License-CC0--1.0-bd93f9?style=for-the-badge&logo=creativecommons&logoColor=white&labelColor=6272a4">
+        <img alt="License CC0-1.0" src="https://img.shields.io/badge/License-CC0--1.0-bd93f9?style=for-the-badge&logo=creativecommons&logoColor=white&labelColor=6272a4">
         <!-- Portfolio -->
         <a href="https://theonliestmattastic.github.io/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4"></a>
         <!-- Profile -->
@@ -59,8 +77,11 @@ ___________.__             ________         .__  .__                 __
       </div>
     </header>
 
+
+    <!-- MAIN CONTENT SECTION: Where all the script information is displayed -->
     <main>
 
+      <!-- REMINDER: Welcome/intro section - explains what this website is about -->
       <div class="project-card">
         <h2>🔭 Overview</h2>
         <p>
@@ -68,11 +89,13 @@ ___________.__             ________         .__  .__                 __
         </p>
       </div>
 
+
+      <!-- REMINDER: Script card for NEWbara - the advanced system bootstrapper -->
       <!-- NEWbara -->
       <div class="project-card">
         <h2>🐧 NEWbara.sh</h2>
         <p class="buttons card">
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelCdlor=6272a4"></a>
           <a href="https://docs.fedoraproject.org/en-US/quick-docs/dnf/" target="_blank"><img alt="DNF" src="https://img.shields.io/badge/Package-dnf-bd93f9?logo=fedora&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
           <a href="https://flatpak.org/" target="_blank"><img alt="Flatpak" src="https://img.shields.io/badge/Flatpak-Installer-bd93f9?logo=flatpak&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
           <a href="https://snapcraft.io/" target="_blank"><img alt="Snap" src="https://img.shields.io/badge/Snap-Packages-bd93f9?logo=snapcraft&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
@@ -87,13 +110,15 @@ ___________.__             ________         .__  .__                 __
         </ul>
       </div>
 
+
+      <!-- REMINDER: Script card for mountMyCloudDrives - mounts cloud storage locally -->
       <!-- mountMyCloudDrives -->
       <div class="project-card">
         <h2>☁️ mountMyCloudDrives.sh</h2>
         <p class="buttons card">
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://rclone.org/" target="_blank"><img src="https://img.shields.io/badge/Cloud-rclone-bd93f9?logo=icloud&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://github.com/nickg/xcowsay" target="_blank"><img src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://rclone.org/" target="_blank"><img alt="rclone" src="https://img.shields.io/badge/Cloud-rclone-bd93f9?logo=icloud&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://github.com/nickg/xcowsay" target="_blank"><img alt="xcowsay" src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
         </p>
         <p><strong>Purpose:</strong> Mounts all my cloud storage accounts locally for seamless access.</p>
         <ul>
@@ -103,13 +128,15 @@ ___________.__             ________         .__  .__                 __
         </ul>
       </div>
 
+
+      <!-- REMINDER: Script card for myLoginScript - runs at login for RGB lighting and greetings -->
       <!-- myLoginScript -->
       <div class="project-card">
         <h2>🌈 myLoginScript.sh</h2>
         <p class="buttons card">
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://openrgb.org/" target="_blank"><img src="https://img.shields.io/badge/RGB-OpenRGB-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://github.com/nickg/xcowsay" target="_blank"><img src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://openrgb.org/" target="_blank"><img alt="OpenRGB" src="https://img.shields.io/badge/RGB-OpenRGB-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://github.com/nickg/xcowsay" target="_blank"><img alt="xcowsay" src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
         </p>
         <p><strong>Purpose:</strong> Adds polish and personality to my login process.</p>
         <ul>
@@ -118,12 +145,14 @@ ___________.__             ________         .__  .__                 __
         </ul>
       </div>
 
+
+      <!-- REMINDER: Script card for don'Type - automates in-game keybindings for Schedule I -->
       <!-- don'Type -->
       <div class="project-card">
         <h2>🤖 don'Type.sh</h2>
         <p class="buttons card">
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://github.com/jordansissel/xdotool" target="_blank"><img src="https://img.shields.io/badge/Automation-xdotool-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://github.com/jordansissel/xdotool" target="_blank"><img alt="xdotool" src="https://img.shields.io/badge/Automation-xdotool-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
         </p>
         <p><strong>Purpose:</strong> Automates in-game keybinding setup for <em>Schedule I</em>.</p>
         <ul>
@@ -133,11 +162,13 @@ ___________.__             ________         .__  .__                 __
         </ul>
       </div>
 
+
+      <!-- REMINDER: Script card for changeCase - renames files/directories by changing first character case -->
       <!-- changeCase -->
       <div class="project-card">
         <h2>🔤 changeCase.sh</h2>
         <p class="buttons card">
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
         </p>
         <p><strong>Purpose:</strong> Batch rename directories and files by changing the case of their first character.</p>
         <ul>
@@ -147,6 +178,8 @@ ___________.__             ________         .__  .__                 __
         </ul>
       </div>
 
+
+      <!-- REMINDER: Instructions section - how to download and use the scripts -->
       <!-- Getting Started -->
       <div class="project-card">
         <h2>🚀 Getting Started</h2>
@@ -168,12 +201,16 @@ cd My-Bash-Toolkit</code></pre>
         <p><em>Note: See each script’s header for specific dependencies.</em></p>
       </div>
 
+
+      <!-- REMINDER: License information - project is open source -->
       <!-- License -->
       <div class="project-card">
         <h2>🛸 License</h2>
         <p>Distributed under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0 Universal License</a>.</p>
       </div>
 
+
+      <!-- REMINDER: Professional note for recruiters/hiring managers -->
       <!-- Recruiter Note -->
       <div class="project-card">
         <h2>🪐 Recruiter’s Note</h2>
@@ -192,6 +229,8 @@ cd My-Bash-Toolkit</code></pre>
         </p>
       </div>
 
+
+      <!-- REMINDER: Contact information and links to social/professional profiles -->
       <!-- Contact -->
       <div class="project-card">
         <h2>👽 Contact!</h2>
@@ -210,17 +249,24 @@ cd My-Bash-Toolkit</code></pre>
 
     </main>
 
+
+    <!-- REMINDER: Footer with inspirational quote -->
     <footer>
       <p><q><em>Sometimes the questions are complicated and the answers are simple.</em></q> — Dr. Seuss</p>
     </footer>
 
+
+    <!-- REMINDER: JavaScript for theme switching functionality -->
     <script>
+      // REMINDER: Get the theme toggle button element
       const toggleBtn = document.getElementById('theme-toggle');
+      // REMINDER: Check if user previously chose a theme and restore it
       const currentTheme = localStorage.getItem('theme');
       if (currentTheme) {
         document.documentElement.setAttribute('data-theme', currentTheme);
         toggleBtn.textContent = currentTheme === 'dark' ? '🌛' : '🌞';
       }
+      // REMINDER: Listen for button clicks to switch themes
       toggleBtn.addEventListener('click', () => {
         let theme = document.documentElement.getAttribute('data-theme');
         if (theme === 'dark') {
