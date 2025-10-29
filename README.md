@@ -1,18 +1,18 @@
 # 🧰 My Bash Toolkit
 
 ```txt
-___________.__             ________         .__  .__                 __   
-\__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_ 
-  |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\
-  |    |   |   Y  \  ___/  /    |    \   |  \  |_|  \  ___/ \___ \  |  |  
-  |____|   |___|  /\___  > \_______  /___|  /____/__|\___  >____  > |__|  
-                \/     \/          \/     \/             \/     \/        
-   _____          __    __                   __  .__                      
-  /     \ _____ _/  |__/  |______    _______/  |_|__| ____                
- /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\               
-/    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___               
-\____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  >              
-        \/     \/                \/     \/               \/               
+        ___________.__             ________         .__  .__                 __    
+        \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_  
+          |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\ 
+          |    |   |   Y  \  ___/  /    |    \   |  \  |_|  \  ___/ \___ \  |  |   
+          |____|   |___|  /\___  > \_______  /___|  /____/__|\___  >____  > |__|   
+                        \/     \/          \/     \/             \/     \/         
+        /\        _____          __    __                   __  .__             /\ 
+        \ \      /     \ _____ _/  |__/  |______    _______/  |_|__| ____      / / 
+         \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\    / /  
+          \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /   
+           \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /    
+            \/         \/     \/                \/     \/               \/  \/     
 ```
 
 ![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
@@ -23,7 +23,7 @@ ___________.__             ________         .__  .__                 __
 [![Portfolio](https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4)](https://theonliestmattastic.github.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4)](https://github.com/theonliestmattastic)
 
-## 📋 Table of Contents
+## 🧭 Table of Contents
 
 - [🔭 Overview](#-overview)
 - [🗺️ Scripts Included](#️-scripts-included)
@@ -63,6 +63,8 @@ This repository is a collection of Bash scripts I use to automate and streamline
 - **Dependencies:** `dnf`, `flatpak`, `snap`, `sudo`.
 - **Use Case:** Complete system setup automation for fresh Nobara/Fedora installations with advanced configuration options.  
 
+---
+
 ### ☁️ **mountMyCloudDrives.sh**
 
 [![Bash](https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4)](https://www.gnu.org/software/bash/)
@@ -74,6 +76,8 @@ This repository is a collection of Bash scripts I use to automate and streamline
 - **Dependencies:** `rclone`, `xcowsay`.  
 - **Use Case:** Automates cloud drive access at login with playful feedback.  
 
+---
+
 ### 🌈 **myLoginScript.sh**
 
 [![Bash](https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4)](https://www.gnu.org/software/bash/)
@@ -84,6 +88,8 @@ This repository is a collection of Bash scripts I use to automate and streamline
 - **Summary:** Loads my OpenRGB profile (`Home`) and displays a fortune message with `xcowsay`.  
 - **Dependencies:** `openrgb`, `xcowsay`.  
 - **Use Case:** Ensures consistent RGB setup and a lighthearted greeting every session.  
+
+---
 
 ### 🤖 **don'Type.sh**
 
@@ -100,6 +106,8 @@ This repository is a collection of Bash scripts I use to automate and streamline
   - Non-interactive execution for gaming efficiency
 - **Dependencies:** `xdotool`.
 - **Use Case:** Eliminates manual command typing during gameplay, completing setup in ~30 seconds instead of several minutes of manual input.
+
+---
 
 ### 🔤 **changeCase.sh**
 
@@ -170,7 +178,7 @@ Most scripts support customization through:
 
 ### Compatibility & Customization
 
-- **Personal Setup:** These scripts were written for my personal Nobara/Fedora workflow, so you may need to adjust paths, package lists, or configurations for your environment.
+- **Personal Setup:** These scripts were written for my personal Nobara workflow, so you may need to adjust paths, package lists, or configurations for your environment.
 - **Linux Focus:** Designed primarily for Linux systems with systemd, DNF, and common package managers. May require adaptation for other distributions.
 - **Version Dependencies:** Some scripts depend on specific tool versions (e.g., rclone remotes, OpenRGB profiles).
 
@@ -226,7 +234,7 @@ This repository serves as a comprehensive portfolio piece demonstrating practica
 ### Development Process
 
 - **Iterative Improvement:** Scripts evolved from simple solutions to robust, feature-rich tools
-- **Testing & Debugging:** Real-world testing leading to improved error handling and user feedback
+- **Testing & Debugging:** Real-world testing leading to improved error handling  
 - **User-Centered Design:** Scripts include help systems, validation, and clear success/failure indicators
 - **Version Control:** Proper Git usage with meaningful commit messages and repository organization
 
