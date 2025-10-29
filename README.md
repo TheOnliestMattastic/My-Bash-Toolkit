@@ -84,10 +84,17 @@ This repository is a collection of Bash scripts I use to automate and streamline
 [![OpenRGB](https://img.shields.io/badge/RGB-OpenRGB-bd93f9?style=for-the-badge&labelColor=6272a4)](https://openrgb.org/)
 [![xcowsay](https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4)](https://github.com/nickg/xcowsay)
 
-- **Purpose:** Adds polish and fun to login.  
-- **Summary:** Loads my OpenRGB profile (`Home`) and displays a fortune message with `xcowsay`.  
-- **Dependencies:** `openrgb`, `xcowsay`.  
-- **Use Case:** Ensures consistent RGB setup and a lighthearted greeting every session.  
+- **Purpose:** Enhances login experience with RGB setup and interactive fortune display.
+- **Summary:** A robust login script that sets OpenRGB profiles, displays fortunes with cowsay, includes intelligent autostart configuration, and provides comprehensive error handling.
+- **Key Features:**
+  - Automatic OpenRGB profile loading for consistent RGB lighting
+  - Interactive fortune display using cow-themed bubbles
+  - Smart autostart detection and setup with user prompts
+  - Dependency validation with helpful installation instructions
+  - Cross-desktop autostart support (KDE Plasma and GNOME)
+  - Graceful error handling that continues execution despite failures
+- **Dependencies:** `openrgb`, `xcowsay` (provides xcowfortune).
+- **Use Case:** Provides a polished, automated login experience with RGB consistency, entertainment, and smart configuration management.  
 
 ---
 
