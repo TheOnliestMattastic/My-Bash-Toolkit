@@ -31,7 +31,7 @@
   - [☁️ mountMyCloudDrives.sh](#️-mountmyclouddrivessh)
   - [🌈 myLoginScript.sh](#-myloginscriptsh)
   - [🤖 donTYPE.sh](#-dontypesh)
-  - [🔤 changeCase.sh](#-changecasesh)
+  - [🔤 mooCASE.sh](#-changecasesh)
 - [🚀 Getting Started](#-getting-started)
 - [🌕 Notes](#-notes)
 - [🛸 License](#-license)
@@ -113,7 +113,7 @@ This repository is a collection of Bash scripts I use to automate and streamline
 
 ---
 
-### 🔤 **changeCase.sh**
+### 🔤 **mooCASE.sh**
 
 [![Bash](https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4)](https://www.gnu.org/software/bash/)
 
@@ -139,12 +139,14 @@ This repository is a collection of Bash scripts I use to automate and streamline
 ### Installation
 
 1. **Clone the repository:**
+
    ```sh
    git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
    cd My-Bash-Toolkit
    ```
 
 2. **Make scripts executable:**
+
    ```sh
    # For all scripts at once
    chmod +x scripts/*/*.sh
@@ -156,6 +158,7 @@ This repository is a collection of Bash scripts I use to automate and streamline
    ```
 
 3. **Run any script:**
+
    ```sh
    ./scripts/scriptName/scriptName.sh [options]
    ```
@@ -168,11 +171,12 @@ Each script includes detailed setup instructions in its header comments. Here ar
 - **mountMyCloudDrives.sh:** Requires `rclone` configured with cloud remotes and `xcowsay`
 - **myLoginScript.sh:** Requires `openrgb` and `xcowsay`
 - **donTYPE.sh:** Requires `xdotool` for automation
-- **changeCase.sh:** No external dependencies (uses built-in tools)
+- **mooCASE.sh:** No external dependencies (uses built-in tools)
 
 ### Configuration
 
 Most scripts support customization through:
+
 - Command-line options (see `--help` for each script)
 - Configuration files (NEWbara.sh supports custom package lists)
 - Environment variables
