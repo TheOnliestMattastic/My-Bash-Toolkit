@@ -124,7 +124,7 @@ This repository is a collection of Bash scripts I use to automate and streamline
 - **Dependencies:** None (uses built-in Bash and standard Unix tools).
 - **Use Case:** Quickly standardize file and directory naming conventions across large collections of files, particularly useful for organizing media libraries or codebases with inconsistent naming.
 
-## 🚀 Getting Started
+## 🚀 Blasting Off
 
 ### Prerequisites
 
