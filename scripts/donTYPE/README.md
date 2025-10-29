@@ -36,27 +36,34 @@ This script automates the setup of in-game keybindings for *Schedule I*, an indi
 
 - Linux system with X11 (for `xdotool` compatibility).
 - `xdotool` installed (`sudo dnf install xdotool` on Fedora/Nobara).
-- *Schedule I* game running in a windowed mode.
 
 ## 🚀 Blasting Off
 
-1. Clone the repository:
+Clone the repository:
 
-   ```sh
-   git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
-   cd My-Bash-Toolkit/scripts/donTYPE
-   ```
+```sh
+git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
+cd My-Bash-Toolkit/scripts/donTYPE
+```
 
-2. Make executable and run:
+Make executable and run:
 
-   ```sh
-   chmod +x donTYPE.sh
-   ./donTYPE.sh
-   ```
+```sh
+chmod +x donTYPE.sh
+./donTYPE.sh
+```
 
-3. Switch to the game window within 5 seconds.
+Switch to the game window within 5 seconds.
 
-## 🌠 Keybindings Set
+## 🌠 TODO: Future Features
+
+- [ ] **Configurable Bindings**: Allow custom key-command mappings via config file.
+- [ ] **Multi-Game Support**: Extend to other games with console commands.
+- [ ] **Window Detection**: Automatically detect and focus game window.
+- [ ] **Progress Feedback**: Real-time typing progress indicator.
+- [ ] **Error Recovery**: Retry failed commands or pause on interruptions.
+
+## 🔧 Keybindings Set
 
 - **F1**: `~bind f1 teleport motelroom`
 - **F2**: `~bind f2 teleport sweatshop`
