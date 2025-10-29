@@ -7,17 +7,17 @@
 #                 \/     \/          \/     \/             \/     \/        
 # /\        _____          __    __                   __  .__             /\
 # \ \      /     \ _____ _/  |__/  |______    _______/  |_|__| ____      / /
-#  \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ __\    / /
-#   \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /
-#    \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /
+#  \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\    / / 
+#   \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /  
+#    \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /   
 #     \/         \/     \/                \/     \/               \/  \/    
 #
 #                                presents,
 #
-#                             mooCASE:
-#         rename first char of each dir or file with upper or lower case
+#                                mooCASE:
+#     rename first char of each dir or file with upper or lower case
 # --------------------------------------------------------------------------
-# GOAL: Changes the first letter of file or directory names to lowercase.
+# GOAL: Changes the first letter of file or directory names to upper or lowercase.
 # --------------------------------------------------------------------------
 # HOW TO USE:
 # 1. Make it runnable: chmod +x mooCASE.sh
@@ -26,6 +26,7 @@
 #    OPTIONS:
 #       -d : Only change directories (default).
 #       -f : Only change files.
+#       -u : Convert to uppercase (default is lowercase).
 #       -p [path] : Set the target path. Defaults to the current directory.
 # --------------------------------------------------------------------------
 
@@ -63,10 +64,13 @@ DEFAULT_PATH="$PWD"
 # Set the default mode to directories.
 MODE="dirs"
 
+# Set the default case conversion to lowercase.
+CASE_MODE="lower"
+
 # --- Argument Parsing ---
 
 # Parse the command-line options.
-while getopts "p:d:f" opt; do
+while getopts "p:d:f:u" opt; do
   case $opt in
   # -p: Set the path.
   p)
@@ -80,9 +84,13 @@ while getopts "p:d:f" opt; do
   f)
     MODE="files"
     ;;
+  # -u: Set the case mode to uppercase.
+  u)
+    CASE_MODE="upper"
+    ;;
   # Handle invalid options.
   *)
-    moo "I am Error: Invalid Option $OPTARG. Use -p for path, -d for dirs, or -f for files"
+    moo "I am Error: Invalid Option $OPTARG. Use -p for path, -d for dirs, -f for files, or -u for uppercase"
     exit 1
     ;;
   esac
@@ -110,15 +118,25 @@ for item in *; do
   # Check if the item should be renamed based on the selected mode.
   if [ "$MODE" = "dirs" ] && [ -d "$item" ]; then
 
-    # `sed` converts the first character to lowercase.
-    newname=$(echo "$item" | sed -E 's/^(.)/\L\1/')
+    # `sed` converts the first character based on case mode.
+    if [ "$CASE_MODE" = "upper" ]; then
+      newname=$(echo "$item" | sed -E 's/^(.)/\U\1/')
+    else
+      newname=$(echo "$item" | sed -E 's/^(.)/\L\1/')
+    fi
 
     # Rename the item only if the new name is different.
     [ "$item" != "$newname" ] && mv -v "$item" "$newname"
 
   # This is a file and we are in 'files' mode.
   elif [ "$MODE" = "files" ] && [ -f "$item" ]; then
-    newname=$(echo "$item" | sed -E 's/^(.)/\L\1/')
+
+    # `sed` converts the first character based on case mode.
+    if [ "$CASE_MODE" = "upper" ]; then
+      newname=$(echo "$item" | sed -E 's/^(.)/\U\1/')
+    else
+      newname=$(echo "$item" | sed -E 's/^(.)/\L\1/')
+    fi
 
     # Rename the item only if the new name is different.
     [ "$item" != "$newname" ] && mv -v "$item" "$newname"

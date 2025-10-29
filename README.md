@@ -1,18 +1,18 @@
 # 🧰 My Bash Toolkit
 
 ```txt
-        ___________.__             ________         .__  .__                 __    
-        \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_  
-          |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\ 
-          |    |   |   Y  \  ___/  /    |    \   |  \  |_|  \  ___/ \___ \  |  |   
-          |____|   |___|  /\___  > \_______  /___|  /____/__|\___  >____  > |__|   
-                        \/     \/          \/     \/             \/     \/         
-        /\        _____          __    __                   __  .__             /\ 
-        \ \      /     \ _____ _/  |__/  |______    _______/  |_|__| ____      / / 
-         \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\    / /  
-          \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /   
-           \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /    
-            \/         \/     \/                \/     \/               \/  \/     
+ ___________.__             ________         .__  .__                 __    
+ \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_  
+   |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\ 
+   |    |   |   Y  \  ___/  /    |    \   |  \  |_|  \  ___/ \___ \  |  |   
+   |____|   |___|  /\___  > \_______  /___|  /____/__|\___  >____  > |__|   
+                 \/     \/          \/     \/             \/     \/         
+ /\        _____          __    __                   __  .__             /\ 
+ \ \      /     \ _____ _/  |__/  |______    _______/  |_|__| ____      / / 
+  \ \    /  \ /  \\__  \\   __\   __\__  \  /  ___/\   __\  |/ ___\    / /  
+   \ \  /    Y    \/ __ \|  |  |  |  / __ \_\___ \  |  | |  \  \___   / /   
+    \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /    
+     \/         \/     \/                \/     \/               \/  \/     
 ```
 
 ![Last Commit](https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4)
@@ -113,20 +113,23 @@ This repository is a collection of Bash scripts I use to automate and streamline
 
 ---
 
-### 🔤 **mooCASE.sh**
+### 🌝 **mooCASE.sh**
 
 [![Bash](https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4)](https://www.gnu.org/software/bash/)
 
-- **Purpose:** Batch rename directories and files by changing the case of their first character.
-- **Summary:** A utility script that converts the first character of directory and file names to lowercase, with support for custom path targeting and filtering options.
+- **Purpose:** Batch rename directories and files by converting first character to lowercase.
+- **Summary:** A robust utility script that standardizes file and directory naming by converting the first character to lowercase, featuring flexible filtering options, error handling, and optional visual feedback.
 - **Key Features:**
-  - Automatic case conversion (first character to lowercase)
-  - Command-line options for custom paths (`-p`)
-  - Filtering by directory (`-d`) or file (`-f`) types
-  - Safe operation with verbose output
-  - Non-destructive (only renames when changes are needed)
-- **Dependencies:** None (uses built-in Bash and standard Unix tools).
-- **Use Case:** Quickly standardize file and directory naming conventions across large collections of files, particularly useful for organizing media libraries or codebases with inconsistent naming.
+  - Case conversion modes (lowercase default, uppercase with `-u` option)
+  - Selective processing (directories only with `-d`, files only with `-f`)
+  - Custom path targeting with `-p` option (defaults to current directory)
+  - Safe renaming (only processes items when new name differs from original)
+  - Visual feedback using cowsay/lolcat when available (falls back gracefully)
+  - Comprehensive error handling with detailed error messages and logging
+  - Verbose output showing all rename operations
+  - Non-destructive operations preserving file metadata
+- **Dependencies:** None required (uses built-in Bash tools); optional `cowsay` and `lolcat` for enhanced visual feedback.
+- **Use Case:** Quickly standardize naming conventions across file collections, perfect for organizing media libraries, codebases, or any directory structure with inconsistent capitalization.
 
 ## 🚀 Blasting Off
 

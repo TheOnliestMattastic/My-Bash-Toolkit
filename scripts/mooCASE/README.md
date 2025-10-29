@@ -1,4 +1,4 @@
-# 🔄 mooCASE
+# 🌝 mooCASE
 
 ```txt
         ___________.__             ________         .__  .__                 __    
@@ -26,6 +26,7 @@ This repository contains `mooCASE.sh`, a Bash script to rename files and directo
 
 ## 🌟 Features
 
+- **Case Conversion Modes**: Convert first character to lowercase (default) or uppercase (-u option)
 - **Selective Processing**: Choose to rename only files (-f) or only directories (-d)
 - **Path Specification**: Target any directory with the -p option (defaults to current directory)
 - **Safe Renaming**: Only renames items when the new name differs from the original
@@ -60,6 +61,7 @@ chmod +x mooCASE.sh
 
 - `-d`: Process only directories (default mode)
 - `-f`: Process only files
+- `-u`: Convert first character to uppercase (default is lowercase)
 - `-p [path]`: Specify target directory (defaults to current directory)
 
 ### Examples
@@ -71,8 +73,11 @@ chmod +x mooCASE.sh
 # Rename all files in /home/user/documents to start with lowercase
 ./mooCASE.sh -f -p /home/user/documents
 
-# Rename only files in current directory
-./mooCASE.sh -f
+# Rename only files in current directory to start with uppercase
+./mooCASE.sh -f -u
+
+# Rename all directories in /tmp/test to start with uppercase
+./mooCASE.sh -d -u -p /tmp/test
 ```
 
 ## 🌠 TODO: Future Features
