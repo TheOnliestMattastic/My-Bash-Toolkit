@@ -28,9 +28,13 @@ This script automates the setup of in-game keybindings for *Schedule I*, an indi
 
 - **Automated Keybinding**: Binds teleport commands to F1-F9 for quick access to locations like motel room, sweatshop, storage unit, etc.
 - **Utility Commands**: Assigns balance manipulation and inventory management to F10-F12.
-- **Non-Interactive Execution**: Runs automatically after a 5-second delay, allowing time to switch to the game window.
-- **Precise Timing**: Includes delays between commands to ensure proper execution.
-- **Gaming Efficiency**: Completes setup in ~30 seconds instead of several minutes of manual input.
+- **Dependency Validation**: Automatically checks for required tools (xdotool) before execution with helpful error messages.
+- **Error Handling & Recovery**: Continues with remaining bindings if one fails, providing detailed error reporting at completion.
+- **Progress Feedback**: Real-time countdown timer and binding progress messages for user awareness.
+- **Robust Execution**: Comprehensive error handling with cleanup on interruption and undefined variable prevention.
+- **Non-Interactive Execution**: Runs automatically after a 5-second countdown, allowing time to switch to the game window.
+- **Optimized Timing**: Fine-tuned delays between commands for reliable execution without unnecessary waits.
+- **Gaming Efficiency**: Completes setup in ~20 seconds instead of several minutes of manual input.
 
 ## ⚛️ Requirements
 
@@ -57,11 +61,11 @@ Switch to the game window within 5 seconds.
 
 ## 🌠 TODO: Future Features
 
-- [ ] **Configurable Bindings**: Allow custom key-command mappings via config file.
+- [ ] **Configurable Bindings**: Allow custom key-command mappings via external config file.
 - [ ] **Multi-Game Support**: Extend to other games with console commands.
 - [ ] **Window Detection**: Automatically detect and focus game window.
-- [ ] **Progress Feedback**: Real-time typing progress indicator.
-- [ ] **Error Recovery**: Retry failed commands or pause on interruptions.
+- [ ] **Command Retry**: Implement retry mechanism for failed bindings.
+- [ ] **GUI Configuration**: Add a simple GUI for binding customization.
 
 ## 🔧 Keybindings Set
 
@@ -84,9 +88,12 @@ Contributions welcome! Report issues or suggest improvements via GitHub.
 
 ## 🌕 Notes
 
+- The script automatically validates dependencies and provides clear error messages if xdotool is missing.
+- Progress feedback includes a countdown timer and binding status messages for better user experience.
+- If individual bindings fail (due to interruptions), the script continues with remaining ones and reports failures at the end.
 - Ensure the game window is active before the script starts typing.
 - NPCs may interrupt if they interact during execution; run in a safe area.
-- Customize bindings by editing the script if needed.
+- Bindings are easily customizable by editing the associative array in the script.
 
 ## 🛸 License
 
@@ -94,9 +101,11 @@ This project is licensed under the [GNU General Public License v3.0](https://www
 
 ## 🪐 Recruiter's Note
 
-Demonstrates automation scripting, precise timing control, and integration with desktop tools for gaming productivity.
+Demonstrates advanced automation scripting with robust error handling, dependency validation, progress feedback, and modular code structure for reliable desktop tool integration and gaming productivity.
 
 ## 👽 Contact
+
+Curious about my projects? Want to collaborate or hire for entry-level IT/support/dev roles? Shoot me an email or connect on GitHub—I reply quickly and love new challenges.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live_Site-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4)](https://theonliestmattastic.github.io/)
 [![Resume](https://img.shields.io/badge/Resume-PDF-bd93f9?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=6272a4)](https://raw.githubusercontent.com/theonliestmattastic/theonliestmattastic.github.io/main/assets/docs/resume.pdf)

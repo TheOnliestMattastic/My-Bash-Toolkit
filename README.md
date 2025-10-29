@@ -96,16 +96,20 @@ This repository is a collection of Bash scripts I use to automate and streamline
 [![Bash](https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4)](https://www.gnu.org/software/bash/)
 [![xdotool](https://img.shields.io/badge/Automation-xdotool-bd93f9?style=for-the-badge&labelColor=6272a4)](https://github.com/jordansissel/xdotool)
 
-- **Purpose:** Automates in-game keybinding setup for *Schedule I*.
-- **Summary:** Uses `xdotool` to automatically type and bind teleport locations, inventory management, and utility commands to function keys (F1-F12). Features a 5-second delay to allow switching to the game window before execution.
+- **Purpose:** Automates in-game keybinding setup for *Schedule I* with enhanced reliability.
+- **Summary:** Uses `xdotool` to automatically type and bind teleport locations, inventory management, and utility commands to function keys (F1-F12). Includes dependency validation, progress feedback, and robust error handling for reliable execution.
 - **Key Features:**
   - Automated keybinding for teleport locations (motel room, sweatshop, storage unit, etc.)
-  - Inventory management commands (clear trash)
-  - Balance manipulation commands
-  - Precise timing with delays between commands
+  - Inventory management commands (clear trash, clear inventory)
+  - Balance manipulation commands (change balance)
+  - Dependency validation with helpful error messages
+  - Real-time progress feedback with countdown timer
+  - Error handling and recovery (continues on individual binding failures)
+  - Robust execution with cleanup traps and modular code structure
+  - Optimized timing for faster setup completion
   - Non-interactive execution for gaming efficiency
 - **Dependencies:** `xdotool`.
-- **Use Case:** Eliminates manual command typing during gameplay, completing setup in ~30 seconds instead of several minutes of manual input.
+- **Use Case:** Eliminates manual command typing during gameplay, completing setup in ~20 seconds instead of several minutes of manual input with built-in error recovery and user feedback.
 
 ---
 
