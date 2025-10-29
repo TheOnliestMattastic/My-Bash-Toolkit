@@ -14,7 +14,7 @@
 #
 #                                presents,
 #
-#                                don'Type:
+#                                donTYPE:
 #               Automatically binds common in-game commands
 #                     to function keys for Schedule I
 # ------------------------------------------------------------------------------

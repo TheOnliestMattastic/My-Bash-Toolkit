@@ -30,7 +30,7 @@
   - [🐧 NEWbara.sh](#-newbarash)
   - [☁️ mountMyCloudDrives.sh](#️-mountmyclouddrivessh)
   - [🌈 myLoginScript.sh](#-myloginscriptsh)
-  - [🤖 don'Type.sh](#-dontypesh)
+  - [🤖 donTYPE.sh](#-dontypesh)
   - [🔤 changeCase.sh](#-changecasesh)
 - [🚀 Getting Started](#-getting-started)
 - [🌕 Notes](#-notes)
@@ -91,7 +91,7 @@ This repository is a collection of Bash scripts I use to automate and streamline
 
 ---
 
-### 🤖 **don'Type.sh**
+### 🤖 **donTYPE.sh**
 
 [![Bash](https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4)](https://www.gnu.org/software/bash/)
 [![xdotool](https://img.shields.io/badge/Automation-xdotool-bd93f9?style=for-the-badge&labelColor=6272a4)](https://github.com/jordansissel/xdotool)
@@ -163,7 +163,7 @@ Each script includes detailed setup instructions in its header comments. Here ar
 - **NEWbara.sh:** Requires `dnf`, `flatpak`, `snap`, and `sudo` access
 - **mountMyCloudDrives.sh:** Requires `rclone` configured with cloud remotes and `xcowsay`
 - **myLoginScript.sh:** Requires `openrgb` and `xcowsay`
-- **don'Type.sh:** Requires `xdotool` for automation
+- **donTYPE.sh:** Requires `xdotool` for automation
 - **changeCase.sh:** No external dependencies (uses built-in tools)
 
 ### Configuration

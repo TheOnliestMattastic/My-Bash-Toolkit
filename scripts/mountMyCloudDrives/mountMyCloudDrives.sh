@@ -31,28 +31,33 @@
 #   configuring system settings to run this script at login.
 # --------------------------------------------------------------------------
 set -eu
+# Reminder: set -eu means exit on any error (e) and undefined variables (u) - helps catch mistakes early!
+
 # Check for required commands
 command -v rclone >/dev/null 2>&1 || { echo "Error: rclone is not installed."; exit 1; }
 command -v findmnt >/dev/null 2>&1 || { echo "Error: findmnt is not installed."; exit 1; }
 command -v xcowsay >/dev/null 2>&1 || { echo "Error: xcowsay is not installed."; exit 1; }
+
 # Cleanup function to kill background rclone processes on exit
+# Reminder: Trap on ERR ensures background rclone processes are killed if anything fails - prevents zombie processes!
 cleanup() {
     [ -n "$ONEDRIVE_PID" ] && kill "$ONEDRIVE_PID" 2>/dev/null || true
     [ -n "$GOOGLEDRIVE_PID" ] && kill "$GOOGLEDRIVE_PID" 2>/dev/null || true
     [ -n "$DROPBOX_PID" ] && kill "$DROPBOX_PID" 2>/dev/null || true
 }
 trap cleanup ERR
+
 # Define mount directories
 ONEDRIVE="/home/mattastic/OneDrive"
 GOOGLEDRIVE="/home/mattastic/GoogleDrive"
 DROPBOX="/home/mattastic/Dropbox"
 
-# Create directories if they don't exist
-mkdir -p "$ONEDRIVE"
+# Safely create directories with `mkdir -p` if they don't exist
 mkdir -p "$GOOGLEDRIVE"
 mkdir -p "$DROPBOX"
 
 # Mount directories using rclone
+# Reminder: & runs commands in background so script doesn't wait - $! captures process ID for cleanup!
 rclone --vfs-cache-mode full mount OneDrive: "$ONEDRIVE" &
 ONEDRIVE_PID=$!
 rclone --vfs-cache-mode full mount GoogleDrive: "$GOOGLEDRIVE" &
@@ -66,13 +71,14 @@ sleep 60s
 # Create array and track failures
 failures=()
 
+# Reminder: ! findmnt checks if mount exists - if not, add to failures list
 ! findmnt -M "$ONEDRIVE" && failures+=("OneDrive")
-! findmnt -M "$GOOGLEDRIVE" && failures+=("GooooogleDrive")
+! findmnt -M "$GOOGLEDRIVE" && failures+=("GoogleDrive")
 ! findmnt -M "$DROPBOX" && failures+=("Dropbox")
 
-# Notify user of success or failure
+# Reminder: Conditional notifications tell you exactly what worked or failed - check the cow messages!
 if [ ${#failures[@]} -eq 0 ]; then
-	xcowsay "Mooooooo!: OneDrive, GooooogleDrive, and Dropbox successfully mounted!" &
+	xcowsay "Mooooooo!: OneDrive, GoogleDrive, and Dropbox successfully mounted!" &
 elif [ ${#failures[@]} -eq 1 ]; then
 	xcowsay --time=0 --release "I am Error: ${failures[0]} failed to connect!" &
 elif [ ${#failures[@]} -eq 2 ]; then
