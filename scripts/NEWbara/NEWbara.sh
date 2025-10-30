@@ -162,6 +162,8 @@ DNF_PKGS=(
     toilet
     figlet
     xcowsay
+    xdotool
+    neovim
     love
 )
 
