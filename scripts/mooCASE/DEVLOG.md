@@ -4,7 +4,7 @@ This devlog provides an overview of the major changes and development history of
 
 ## Initial Version: `changeCase.sh`
 
-2025-10-27
+2025-10-26
 
 The script was originally named `changeCase.sh`. The first version of the script had the following features:
 
