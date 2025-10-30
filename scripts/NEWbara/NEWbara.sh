@@ -186,6 +186,7 @@ FLAT_PKGS=(
 # And here's the list for Snap packages.
 SNAP_PKGS=(
     marksman
+    code --classic
 )
 
 # --- Loading Custom Package Lists ---
