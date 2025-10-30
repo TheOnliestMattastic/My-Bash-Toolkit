@@ -7,39 +7,41 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- REMINDER: Basic HTML setup - tells browser this is an HTML5 page in English -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- REMINDER: Links to the CSS file that makes everything look pretty -->
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <!-- REMINDER: Basic HTML setup - tells browser this is an HTML5 page in English -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Mattastic" />
-    <link rel="manifest" href="/assets/icons/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#282a36">
+  <!-- REMINDER: Links to the CSS file that makes everything look pretty -->
+  <link rel="stylesheet" href="style.css" />
 
-    <title>My Bash Toolkit</title>
-    <meta name="description" content="A curated collection of automation scripts for Linux systems">
-  </head>
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Mattastic" />
+  <link rel="manifest" href="/assets/icons/site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#282a36">
 
-  <!-- REMINDER: Everything below this line is what users actually see on the webpage -->
-  <body>
+  <title>My Bash Toolkit</title>
+  <meta name="description" content="A curated collection of automation scripts for Linux systems">
+</head>
 
-    <!-- HEADER SECTION: Top of page with branding and navigation -->
-    <header>
+<!-- REMINDER: Everything below this line is what users actually see on the webpage -->
 
-      <!-- REMINDER: Theme toggle button - switches between light/dark mode -->
-      <button id="theme-toggle" aria-label="Toggle theme">🌞</button>
+<body>
 
-      <!-- REMINDER: Fancy ASCII art logo - makes the page look cool -->
-      <pre class="ascii-logo"><code>
+  <!-- HEADER SECTION: Top of page with branding and navigation -->
+  <header>
+
+    <!-- REMINDER: Theme toggle button - switches between light/dark mode -->
+    <button id="theme-toggle" aria-label="Toggle theme">🌞</button>
+
+    <!-- REMINDER: Fancy ASCII art logo - makes the page look cool -->
+    <pre class="ascii-logo"><code>
         ___________.__             ________         .__  .__                 __    
         \__    ___/|  |__   ____   \_____  \   ____ |  | |__| ____   _______/  |_  
           |    |   |  |  \_/ __ \   /   |   \ /    \|  | |  |/ __ \ /  ___/\   __\ 
@@ -53,237 +55,303 @@
            \ \ \____|__  (____  /__|  |__| (____  /____  > |__| |__|\___  > / /    
             \/         \/     \/                \/     \/               \/  \/     </code></pre>
 
-      <!-- REMINDER: Main title and subtitle - tells visitors what this website is about -->
-      <h1>🧰 My Bash Toolkit</h1>
-      <h2>A curated collection of automation scripts for Linux systems</h2>
+    <!-- REMINDER: Main title and subtitle - tells visitors what this website is about -->
+    <h1>🧰 My Bash Toolkit</h1>
+    <h2>A curated collection of automation scripts for Linux systems</h2>
 
-      <!-- REMINDER: GitHub stats badges - shows repository info like last commit, size, etc. -->
-      <!-- Project Badges -->
-      <div class="buttons">
-        <!-- Last Commit -->
-        <img alt="Last Commit" src="https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
-        <!-- Repo Size -->
-        <img alt="Repo Size" src="https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
-        <!-- Code Size -->
-        <img alt="Code Size" src="https://img.shields.io/github/languages/code-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
-        <!-- Source Code-->
-        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit"><img alt="Source Code" src="https://img.shields.io/badge/GitHub-Code-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4"></a>
-        <!-- License -->
-        <img alt="License GPL-3.0-or-later" src="https://img.shields.io/badge/License-GPL--3.0--or--later-bd93f9?style=for-the-badge&logo=gnu&logoColor=white&labelColor=6272a4">
-        <!-- Portfolio -->
-        <a href="https://theonliestmattastic.github.io/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4"></a>
-        <!-- Profile -->
-        <a href="https://github.com/theonliestmattastic"><img alt="GitHub Profile" src="https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4"></a>
-      </div>
-    </header>
-
-
-    <!-- MAIN CONTENT SECTION: Where all the script information is displayed -->
-    <main>
-
-      <!-- REMINDER: Welcome/intro section - explains what this website is about -->
-      <div class="project-card">
-        <h2>🔭 Overview</h2>
-        <p>
-          Welcome to <strong>My Bash Toolkit</strong> — a curated collection of automation scripts I’ve built to make Linux systems smarter, faster, and more fun. Each script solves a real-world problem I encountered, and together they demonstrate my ability to automate workflows, document solutions, and bring personality into technical work.
-        </p>
-      </div>
-
-
-      <!-- REMINDER: Script card for NEWbara - the advanced system bootstrapper -->
-      <!-- NEWbara -->
-      <div class="project-card">
-        <h2>🐧 NEWbara.sh</h2>
-        <p class="buttons card">
-          <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/NEWbara/NEWbara.sh" target="_blank"><img alt="Source Code" src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/NEWbara/README.md" target="_blank"><img alt="Docs" src="https://img.shields.io/badge/Docs-Readme-bd93f9?logo=readme&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://docs.fedoraproject.org/en-US/quick-docs/dnf/" target="_blank"><img alt="DNF" src="https://img.shields.io/badge/Package-dnf-bd93f9?logo=fedora&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://flatpak.org/" target="_blank"><img alt="Flatpak" src="https://img.shields.io/badge/Flatpak-Installer-bd93f9?logo=flatpak&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://snapcraft.io/" target="_blank"><img alt="Snap" src="https://img.shields.io/badge/Snap-Packages-bd93f9?logo=snapcraft&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-        </p>
-        <p><strong>Purpose:</strong> Comprehensive system bootstrapper for Nobara/Fedora with multi-package manager support and advanced features.</p>
-        <ul>
-          <li><strong>Multi-Package Manager:</strong> Installs via DNF, Flatpak, and Snap with user/system Flatpak modes.</li>
-          <li><strong>Custom Package Lists:</strong> Load packages from text files for DNF, Flatpak, and Snap.</li>
-          <li><strong>Dry Run Mode:</strong> Preview installations without making changes.</li>
-          <li><strong>Automatic Logging:</strong> Logs all output to timestamped files for troubleshooting.</li>
-          <li><strong>Smart Cleanup:</strong> Removes orphaned packages and unused runtimes post-installation.</li>
-        </ul>
-      </div>
-
-
-      <!-- REMINDER: Script card for mountMyCloudDrives - mounts cloud storage locally -->
-      <!-- mountMyCloudDrives -->
-      <div class="project-card">
-        <h2>☁️ mountMyCloudDrives.sh</h2>
-        <p class="buttons card">
-          <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/mountMyCloudDrives/mountMyCloudDrives.sh" target="_blank"><img alt="Source Code" src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://rclone.org/" target="_blank"><img alt="rclone" src="https://img.shields.io/badge/Cloud-rclone-bd93f9?logo=icloud&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://github.com/nickg/xcowsay" target="_blank"><img alt="xcowsay" src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
-        </p>
-        <p><strong>Purpose:</strong> Mounts all my cloud storage accounts locally for seamless access.</p>
-        <ul>
-          <li>Creates local directories for OneDrive, Google Drive, and Dropbox.</li>
-          <li>Mounts each remote using <code>rclone</code> with caching enabled.</li>
-          <li>Verifies mounts with <code>findmnt</code> and reports success/failure via <code>xcowsay</code>.</li>
-        </ul>
-      </div>
-
-
-      <!-- REMINDER: Script card for myLoginScript - runs at login for RGB lighting and greetings -->
-      <!-- myLoginScript -->
-      <div class="project-card">
-        <h2>🌈 myLoginScript.sh</h2>
-        <p class="buttons card">
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://openrgb.org/" target="_blank"><img alt="OpenRGB" src="https://img.shields.io/badge/RGB-OpenRGB-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://github.com/nickg/xcowsay" target="_blank"><img alt="xcowsay" src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
-        </p>
-        <p><strong>Purpose:</strong> Adds polish and personality to my login process.</p>
-        <ul>
-          <li>Applies my OpenRGB profile named <code>Home</code> for consistent lighting.</li>
-          <li>Displays a fortune message using <code>xcowsay</code> for a fun greeting.</li>
-        </ul>
-      </div>
-
-
-      <!-- REMINDER: Script card for donTYPE - automates in-game keybindings for Schedule I -->
-      <!-- donTYPE -->
-      <div class="project-card">
-        <h2>🤖 donTYPE.sh</h2>
-        <p class="buttons card">
-          <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/donTYPE/donTYPE.sh" target="_blank"><img alt="Source Code" src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-          <a href="https://github.com/jordansissel/xdotool" target="_blank"><img alt="xdotool" src="https://img.shields.io/badge/Automation-xdotool-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
-        </p>
-        <p><strong>Purpose:</strong> Automates in-game keybinding setup for <em>Schedule I</em>.</p>
-        <ul>
-          <li>Uses <code>xdotool</code> to bind teleport and utility commands to function keys (F1–F12).</li>
-          <li>Runs after a short delay so you can switch to the game window.</li>
-          <li>Completes setup in ~30 seconds without manual typing.</li>
-        </ul>
-      </div>
-
-
-      <!-- REMINDER: Script card for mooCASE - renames files/directories by changing first character case -->
-      <!-- mooCASE -->
-      <div class="project-card">
-        <h2>🔤 mooCASE.sh</h2>
-        <p class="buttons card">
-          <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
-        </p>
-        <p><strong>Purpose:</strong> Batch rename directories and files by changing the case of their first character.</p>
-        <ul>
-          <li>Converts the first character of directory/file names to lowercase.</li>
-          <li>Supports command-line options for custom paths and filtering by type.</li>
-          <li>Safe operation with verbose output showing only actual changes.</li>
-        </ul>
-      </div>
-
-
-      <!-- REMINDER: Instructions section - how to download and use the scripts -->
-      <!-- Getting Started -->
-      <div class="project-card">
-        <h2>🚀 Getting Started</h2>
-        <ol>
-          <li>Clone the repository:</li>
-          <p>
-            <pre class="code"><code>git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
-cd My-Bash-Toolkit</code></pre>
-          </p>
-          <li>Make a script executable:</li>
-          <p>
-            <pre class="code"><code>chmod +x script-name.sh</code></pre>
-          </p>
-          <li>Run it:</li>
-          <p>
-            <pre class="code"><code>./script-name.sh</code></pre>
-          </p>
-        </ol>
-        <p><em>Note: See each script’s header for specific dependencies.</em></p>
-      </div>
-
-
-      <!-- REMINDER: License information - project is open source -->
+    <!-- REMINDER: GitHub stats badges - shows repository info like last commit, size, etc. -->
+    <!-- Project Badges -->
+    <div class="buttons">
+      <!-- Last Commit -->
+      <img alt="Last Commit"
+        src="https://img.shields.io/github/last-commit/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
+      <!-- Repo Size -->
+      <img alt="Repo Size"
+        src="https://img.shields.io/github/repo-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
+      <!-- Code Size -->
+      <img alt="Code Size"
+        src="https://img.shields.io/github/languages/code-size/TheOnliestMattastic/My-Bash-Toolkit?color=bd93f9&style=for-the-badge&labelColor=6272a4">
+      <!-- Source Code-->
+      <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit"><img alt="Source Code"
+          src="https://img.shields.io/badge/GitHub-Code-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4"></a>
       <!-- License -->
-      <div class="project-card">
-        <h2>🛸 License</h2>
-        <p>Distributed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>.</p>
-      </div>
+      <img alt="License GPL-3.0-or-later"
+        src="https://img.shields.io/badge/License-GPL--3.0--or--later-bd93f9?style=for-the-badge&logo=gnu&logoColor=white&labelColor=6272a4">
+      <!-- Portfolio -->
+      <a href="https://theonliestmattastic.github.io/"><img alt="Portfolio"
+          src="https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4"></a>
+      <!-- Profile -->
+      <a href="https://github.com/theonliestmattastic"><img alt="GitHub Profile"
+          src="https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4"></a>
+    </div>
+  </header>
 
 
-      <!-- REMINDER: Professional note for recruiters/hiring managers -->
-      <!-- Recruiter Note -->
-      <div class="project-card">
-        <h2>🪐 Recruiter’s Note</h2>
+  <!-- MAIN CONTENT SECTION: Where all the script information is displayed -->
+  <main>
+
+    <!-- REMINDER: Welcome/intro section - explains what this website is about -->
+    <div class="project-card">
+      <h2>🔭 Overview</h2>
+      <p>
+        Welcome to <strong>My Bash Toolkit</strong> — a curated collection of automation scripts I’ve built to make
+        Linux systems smarter, faster, and more fun. Each script solves a real-world problem I encountered, and together
+        they demonstrate my ability to automate workflows, document solutions, and bring personality into technical
+        work.
+      </p>
+    </div>
+
+
+    <!-- REMINDER: Script card for NEWbara - the advanced system bootstrapper -->
+    <!-- NEWbara -->
+    <div class="project-card">
+      <h2>🐧 NEWbara.sh</h2>
+      <p class="buttons card">
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/NEWbara/NEWbara.sh"
+          target="_blank"><img alt="Source Code"
+            src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/NEWbara/README.md"
+          target="_blank"><img alt="Docs"
+            src="https://img.shields.io/badge/Docs-Readme-bd93f9?logo=readme&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash"
+            src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://docs.fedoraproject.org/en-US/quick-docs/dnf/" target="_blank"><img alt="DNF"
+            src="https://img.shields.io/badge/Package-dnf-bd93f9?logo=fedora&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://flatpak.org/" target="_blank"><img alt="Flatpak"
+            src="https://img.shields.io/badge/Flatpak-Installer-bd93f9?logo=flatpak&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://snapcraft.io/" target="_blank"><img alt="Snap"
+            src="https://img.shields.io/badge/Snap-Packages-bd93f9?logo=snapcraft&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+      </p>
+      <p><strong>Purpose:</strong> Comprehensive system bootstrapper for Nobara/Fedora with multi-package manager
+        support and advanced features.</p>
+      <ul>
+        <li><strong>Multi-Package Manager:</strong> Installs via DNF, Flatpak, and Snap with user/system Flatpak modes.
+        </li>
+        <li><strong>Custom Package Lists:</strong> Load packages from text files for DNF, Flatpak, and Snap.</li>
+        <li><strong>Dry Run Mode:</strong> Preview installations without making changes.</li>
+        <li><strong>Automatic Logging:</strong> Logs all output to timestamped files for troubleshooting.</li>
+        <li><strong>Smart Cleanup:</strong> Removes orphaned packages and unused runtimes post-installation.</li>
+      </ul>
+    </div>
+
+
+    <!-- REMINDER: Script card for mountMyCloudDrives - mounts cloud storage locally -->
+    <!-- mountMyCloudDrives -->
+    <div class="project-card">
+      <h2>☁️ mountMyCloudDrives.sh</h2>
+      <p class="buttons card">
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/mountMyCloudDrives/mountMyCloudDrives.sh"
+          target="_blank"><img alt="Source Code"
+            src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/mountMyCloudDrives/README.md"
+          target="_blank"><img alt="Docs"
+            src="https://img.shields.io/badge/Docs-Readme-bd93f9?logo=readme&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash"
+            src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://rclone.org/" target="_blank"><img alt="rclone"
+            src="https://img.shields.io/badge/Cloud-rclone-bd93f9?logo=icloud&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/nickg/xcowsay" target="_blank"><img alt="xcowsay"
+            src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+      </p>
+      <p><strong>Purpose:</strong> Mounts multiple cloud storage accounts locally with enhanced reliability.</p>
+      <ul>
+        <li>Creates local directories for OneDrive, Google Drive, and Dropbox with error checking.</li>
+        <li>Mounts each remote using <code>rclone</code> with caching and automatic verification.</li>
+        <li>Provides real-time progress feedback and robust error handling.</li>
+        <li>Reports success/failure via themed notifications with detailed status.</li>
+      </ul>
+    </div>
+
+
+    <!-- REMINDER: Script card for myLoginScript - runs at login for RGB lighting and greetings -->
+    <!-- myLoginScript -->
+    <div class="project-card">
+      <h2>🌈 myLoginScript.sh</h2>
+      <p class="buttons card">
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/myLoginScript/myLoginScript.sh"
+          target="_blank"><img alt="Source Code"
+            src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/myLoginScript/README.md"
+          target="_blank"><img alt="Docs"
+            src="https://img.shields.io/badge/Docs-Readme-bd93f9?logo=readme&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash"
+            src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://openrgb.org/" target="_blank"><img alt="OpenRGB"
+            src="https://img.shields.io/badge/RGB-OpenRGB-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/nickg/xcowsay" target="_blank"><img alt="xcowsay"
+            src="https://img.shields.io/badge/Fun-xcowsay-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+      </p>
+      <p><strong>Purpose:</strong> Enhances login experience with RGB setup and interactive fortune display.</p>
+      <ul>
+        <li>Automatic OpenRGB profile loading for consistent RGB lighting setup.</li>
+        <li>Interactive fortune display using cow-themed bubbles for entertainment.</li>
+        <li>Smart autostart detection and setup with user prompts (only when needed).</li>
+        <li>Cross-desktop autostart support (KDE Plasma and GNOME compatible).</li>
+        <li>Comprehensive dependency validation and graceful error handling.</li>
+      </ul>
+    </div>
+
+
+    <!-- REMINDER: Script card for donTYPE - automates in-game keybindings for Schedule I -->
+    <!-- donTYPE -->
+    <div class="project-card">
+      <h2>🤖 donTYPE.sh</h2>
+      <p class="buttons card">
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/donTYPE/donTYPE.sh"
+          target="_blank"><img alt="Source Code"
+            src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/donTYPE/README.md"
+          target="_blank"><img alt="Docs"
+            src="https://img.shields.io/badge/Docs-Readme-bd93f9?logo=readme&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash"
+            src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/jordansissel/xdotool" target="_blank"><img alt="xdotool"
+            src="https://img.shields.io/badge/Automation-xdotool-bd93f9?style=for-the-badge&labelColor=6272a4"></a>
+      </p>
+      <p><strong>Purpose:</strong> Automates in-game keybinding setup for <em>Schedule I</em> with enhanced reliability.
+      </p>
+      <ul>
+        <li>Uses <code>xdotool</code> to bind teleport and utility commands to function keys (F1–F12).</li>
+        <li>Features dependency validation, real-time progress feedback, and error recovery.</li>
+        <li>Robust execution with countdown timer and detailed error reporting.</li>
+        <li>Completes setup in ~20 seconds with built-in error handling and user feedback.</li>
+      </ul>
+    </div>
+
+
+    <!-- REMINDER: Script card for mooCASE - renames files/directories by changing first character case -->
+    <!-- mooCASE -->
+    <div class="project-card">
+      <h2>🔄 mooCASE.sh</h2>
+      <p class="buttons card">
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/mooCASE/mooCASE.sh"
+          target="_blank"><img alt="Source Code"
+            src="https://img.shields.io/badge/Code-Source-bd93f9?logo=github&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://github.com/TheOnliestMattastic/My-Bash-Toolkit/blob/main/scripts/mooCASE/README.md"
+          target="_blank"><img alt="Docs"
+            src="https://img.shields.io/badge/Docs-Readme-bd93f9?logo=readme&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+        <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash"
+            src="https://img.shields.io/badge/Shell-Bash-bd93f9?logo=gnu-bash&logoColor=white&style=for-the-badge&labelColor=6272a4"></a>
+      </p>
+      <p><strong>Purpose:</strong> Batch rename directories and files by converting first character to upper or
+        lowercase.</p>
+      <ul>
+        <li>Case conversion modes (lowercase default, uppercase with <code>-u</code> option).</li>
+        <li>Selective processing (directories only with <code>-d</code>, files only with <code>-f</code>).</li>
+        <li>Custom path targeting with <code>-p</code> option and visual feedback.</li>
+        <li>Comprehensive error handling and logging with cow-themed messages.</li>
+        <li>Safe operation that only renames when changes are needed.</li>
+      </ul>
+    </div>
+
+
+    <!-- REMINDER: Instructions section - how to download and use the scripts -->
+    <!-- Getting Started -->
+    <div class="project-card">
+      <h2>🚀 Getting Started</h2>
+      <ol>
+        <li>Clone the repository:</li>
         <p>
-          This project isn’t a polished product — it’s a showcase of how I solve problems with code. 
-          Each script began as a solution to a real need, and together they demonstrate:
+        <pre class="code"><code>git clone https://github.com/TheOnliestMattastic/My-Bash-Toolkit.git
+cd My-Bash-Toolkit</code></pre>
         </p>
-        <ul>
-          <li>Practical Bash scripting and Linux administration skills</li>
-          <li>The ability to automate repetitive tasks into efficient workflows</li>
-          <li>Clear documentation and maintainable code practices</li>
-        </ul>
+        <li>Make a script executable:</li>
         <p>
-          If you’re evaluating me as a candidate, this toolkit reflects the same mindset I bring to IT support and system administration roles: 
-          resourceful, adaptable, and focused on making technology work smarter.
+        <pre class="code"><code>chmod +x script-name.sh</code></pre>
         </p>
-      </div>
-
-
-      <!-- REMINDER: Contact information and links to social/professional profiles -->
-      <!-- Contact -->
-      <div class="project-card">
-        <h2>👽 Contact!</h2>
+        <li>Run it:</li>
         <p>
-          Curious about my projects? Want to collaborate or hire for entry-level IT/support/dev roles? Shoot me an email or connect on GitHub—I reply quickly and love new challenges.
+        <pre class="code"><code>./script-name.sh</code></pre>
         </p>
-        <div class="buttons card">
-          <!-- Portfolio -->
-          <a href="https://theonliestmattastic.github.io/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4"></a>
-          <!-- Profile -->
-          <a href="https://github.com/theonliestmattastic"><img alt="GitHub Profile" src="https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4"></a>
-          <!-- Email-->
-          <a href="mailto:matthew.poole485@gmail.com" target="_blank"><img alt="Email" src="https://img.shields.io/badge/Email-matthew.poole485%40gmail.com-bd93f9?style=for-the-badge&logo=gmail&logoColor=white&labelColor=6272a4"></a>
-        </div>
+      </ol>
+      <p><em>Note: See each script’s header for specific dependencies.</em></p>
+    </div>
+
+
+    <!-- REMINDER: License information - project is open source -->
+    <!-- License -->
+    <div class="project-card">
+      <h2>🛸 License</h2>
+      <p>Distributed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>.
+      </p>
+    </div>
+
+
+    <!-- REMINDER: Professional note for recruiters/hiring managers -->
+    <!-- Recruiter Note -->
+    <div class="project-card">
+      <h2>🪐 Recruiter’s Note</h2>
+      <p>
+        This project isn’t a polished product — it’s a showcase of how I solve problems with code.
+        Each script began as a solution to a real need, and together they demonstrate:
+      </p>
+      <ul>
+        <li>Practical Bash scripting and Linux administration skills</li>
+        <li>The ability to automate repetitive tasks into efficient workflows</li>
+        <li>Clear documentation and maintainable code practices</li>
+      </ul>
+      <p>
+        If you’re evaluating me as a candidate, this toolkit reflects the same mindset I bring to IT support and system
+        administration roles:
+        resourceful, adaptable, and focused on making technology work smarter.
+      </p>
+    </div>
+
+
+    <!-- REMINDER: Contact information and links to social/professional profiles -->
+    <!-- Contact -->
+    <div class="project-card">
+      <h2>👽 Contact!</h2>
+      <p>
+        Curious about my projects? Want to collaborate or hire for entry-level IT/support/dev roles? Shoot me an email
+        or connect on GitHub—I reply quickly and love new challenges.
+      </p>
+      <div class="buttons card">
+        <!-- Portfolio -->
+        <a href="https://theonliestmattastic.github.io/"><img alt="Portfolio"
+            src="https://img.shields.io/badge/Portfolio-bd93f9?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=6272a4"></a>
+        <!-- Profile -->
+        <a href="https://github.com/theonliestmattastic"><img alt="GitHub Profile"
+            src="https://img.shields.io/badge/GitHub-Profile-bd93f9?style=for-the-badge&logo=github&logoColor=white&labelColor=6272a4"></a>
+        <!-- Email-->
+        <a href="mailto:matthew.poole485@gmail.com" target="_blank"><img alt="Email"
+            src="https://img.shields.io/badge/Email-matthew.poole485%40gmail.com-bd93f9?style=for-the-badge&logo=gmail&logoColor=white&labelColor=6272a4"></a>
       </div>
+    </div>
 
-    </main>
-
-
-    <!-- REMINDER: Footer with inspirational quote -->
-    <footer>
-      <p><q><em>Sometimes the questions are complicated and the answers are simple.</em></q> — Dr. Seuss</p>
-    </footer>
+  </main>
 
 
-    <!-- REMINDER: JavaScript for theme switching functionality -->
-    <script>
-      // REMINDER: Get the theme toggle button element
-      const toggleBtn = document.getElementById('theme-toggle');
-      // REMINDER: Check if user previously chose a theme and restore it
-      const currentTheme = localStorage.getItem('theme');
-      if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        toggleBtn.textContent = currentTheme === 'dark' ? '🌛' : '🌞';
+  <!-- REMINDER: Footer with inspirational quote -->
+  <footer>
+    <p><q><em>Sometimes the questions are complicated and the answers are simple.</em></q> — Dr. Seuss</p>
+  </footer>
+
+
+  <!-- REMINDER: JavaScript for theme switching functionality -->
+  <script>
+    // REMINDER: Get the theme toggle button element
+    const toggleBtn = document.getElementById('theme-toggle');
+    // REMINDER: Check if user previously chose a theme and restore it
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      toggleBtn.textContent = currentTheme === 'dark' ? '🌛' : '🌞';
+    }
+    // REMINDER: Listen for button clicks to switch themes
+    toggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌞';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '🌛';
       }
-      // REMINDER: Listen for button clicks to switch themes
-      toggleBtn.addEventListener('click', () => {
-        let theme = document.documentElement.getAttribute('data-theme');
-        if (theme === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-          toggleBtn.textContent = '🌞';
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-          toggleBtn.textContent = '🌛';
-        }
-      });
-    </script>
-    
-  </body>
+    });
+  </script>
+</body>
+
 </html>

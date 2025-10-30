@@ -36,7 +36,7 @@ This repository contains `NEWbara.sh`, a Bash script designed to bootstrap a fre
 
 ## ⚛️ Requirements
 
-- Nobara or Fedora Linux (minimum version 36 for compatibility).
+- Nobara or Fedora Linux (minimum version 42 for compatibility).
 - `sudo` access for DNF and Snap installations.
 - Flatpak and Snap package managers installed (script will verify).
 
@@ -81,7 +81,7 @@ Contributions are welcome! Please open issues for bugs or feature requests, and 
 
 ## 🌕 Notes
 
-- Designed for Nobara/Fedora (minimum version 36); tweak for other distros.
+- Designed for Nobara/Fedora (minimum version 42); tweak for other distros.
 - Requires `sudo` for DNF/Snap installs; run as regular user.
 - Flatpaks default to user mode (recommended by Nobara wiki).
 - Logs are saved as `NEWbara_YYYYMMDD_HHMMSS.log`.
