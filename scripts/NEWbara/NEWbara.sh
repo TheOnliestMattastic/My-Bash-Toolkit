@@ -29,10 +29,8 @@
 # --------------------------------------------------------------------------
 
 # --- Script safety net ---
-# Stop the script immediately if any command fails.
+# Stop the script immediately if any command fails and trap for error handling
 set -e
-# Trap for error handling
-# If any command fails, echo the line number where it happened.
 trap 'echo "Error occurred at line $LINENO"' ERR
 
 # --- Dependency Check ---
