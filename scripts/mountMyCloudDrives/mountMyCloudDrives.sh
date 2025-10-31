@@ -53,6 +53,7 @@ GOOGLEDRIVE="/home/mattastic/GoogleDrive"
 DROPBOX="/home/mattastic/Dropbox"
 
 # Safely create directories with `mkdir -p` if they don't exist
+mkdir -p "$ONEDRIVE"
 mkdir -p "$GOOGLEDRIVE"
 mkdir -p "$DROPBOX"
 
