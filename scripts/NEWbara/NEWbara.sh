@@ -50,7 +50,6 @@ short_help() {
     echo "Options:"
     echo "  -f FILE     Load Flatpak packages from FILE"
     echo "  -d FILE     Load DNF packages from FILE"
-    echo "  -s FILE     Load Snap packages from FILE"
     echo "  -S          Install Flatpaks system-wide"
     echo "  -n          Dry run (preview actions)"
     echo "  -h          Show this reference sheet"
@@ -74,7 +73,6 @@ DESCRIPTION
 OPTIONS
     -d FILE     Load DNF packages from FILE (one package per line).
     -f FILE     Load Flatpak packages from FILE (one app ID per line).
-    -s FILE     Load Snap packages from FILE (one package per line).
     -S          Install Flatpaks system-wide (default is user-specific).
     -n          Dry run: preview actions without making changes.
     -h          Display short reference sheet.
@@ -127,7 +125,6 @@ fi
 while getopts "f:s:d:hSn" opt; do
 	case $opt in
 		f) flatpak_file="$OPTARG" ;; # Use a custom list of Flatpaks
-		s) snap_file="$OPTARG" ;; # Use a custom list of Snaps
 		d) dnf_file="$OPTARG" ;; # Use a custom list of DNF packages
 		S) system_flatpak=true ;; # Install Flatpaks for all users
 		n) dry_run=true ;; # Just show what would be done, don't actually do it
@@ -165,6 +162,7 @@ DNF_PKGS=(
     xdotool
     neovim
     love
+    bat
 )
 
 # --- Flatpak Packages ---
@@ -180,13 +178,6 @@ FLAT_PKGS=(
  "eu.betterbird.Betterbird"
  "org.bleachbit.BleachBit"
  "com.jetpackduba.Gitnuro"
-)
-
-# --- Snap Packages ---
-# And here's the list for Snap packages.
-SNAP_PKGS=(
-    marksman
-    code --classic
 )
 
 # --- Loading Custom Package Lists ---
